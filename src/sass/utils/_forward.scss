@@ -1,0 +1,30 @@
+@forward './colors' as color-*;
+@forward './flex' as flex-*;
+@forward './font' as font-*;
+@forward './media' as media-*;
+@forward './transition' as transition-*;
+@forward './mixins' as mix-*;
+
+// @include transition-add('background-color');
+// addTransition --> transition-add
+
+// : color-get('text-alternative');
+// getColor --> color-get
+
+// @include flex-display(null, null, null, center);
+// @include flex-basis(2, 30px);
+// flex( --> flex-display(
+// flexBasis --> flex-basis
+
+// @include font-type('bold', null, 1.875, 0.06em);
+// fontType --> font-type
+
+// @include mix-container(0 15px);
+
+// @include media-mapp(null, 'tablet')
+// @include media-mapp('tablet')
+// @include media-mapp('desktop')
+
+// @media screen and (max-width: 767px)
+// @media screen and (min-width: 768px)
+// @media screen and (min-width: 1200px)

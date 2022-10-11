@@ -1,0 +1,31 @@
+$colors: (
+  'text-primary': #212121,
+  'text-secondary': #757575,
+  'text-alternative': #fff,
+  'text-alternative2': rgba(255, 255, 255, 0.6),
+  'text-logo': #000,
+  'text-placeholder': rgba(117, 117, 117, 0.5),
+  'link-primary': #2196f3,
+  'link-secondary': #12558a,
+
+  'icon-primary': #afb1b8,
+  'icon-secondary': rgba(255, 255, 255, 0.1),
+  'icon-close': rgba(0, 0, 0, 0.1),
+  'icon-close-hover': #f22c2c,
+
+  'bg-browser': #e5e5e5,
+  'bg-page-primary': #fff,
+  'bg-page-secondary': #2f303a,
+  'bg-page-tertiary': #f5f4fa,
+  'bg-overlay-primary': rgba(33, 150, 243, 0.9),
+  'bg-overlay-secondary': rgba(47, 48, 58, 0.8),
+  'bg-backdrop': rgba(0, 0, 0, 0.2),
+  'border-primary': #ececec,
+  'border-secondary': #eee,
+  'border-input-primary': rgba(33, 33, 33, 0.2),
+  'border-input-secondary': rgba(255, 255, 255, 0.3),
+);
+
+@function get($var) {
+  @return map-get($colors, $var);
+}
