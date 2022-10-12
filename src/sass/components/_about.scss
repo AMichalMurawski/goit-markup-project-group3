@@ -1,5 +1,13 @@
 @use '../utils/forward' as *;
 
-.test{
-  font-size: 48px;
+.about {
+  width: 100%;
+  min-width: 320px;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  &__container {
+    padding: 125px 50px 0;
+    @include flex-display(column, null, null, start);
+  }
 }
