@@ -9,39 +9,7 @@
   background-color: color-get('bg-secondary');
   // padding-bottom: 100px; //do usunięcia
 
-  &__container {
-    padding: 125px 20px 0;
-    max-width: 480px;
-    margin: 0 auto;
-    @include flex-display(column, null, null, start);
-  }
-
-  &__title {
-    font-family: 'Titan One';
-    text-transform: uppercase;
-    text-align: center;
-    margin: 0 auto;
-  }
-
-  &__label {
-    margin-bottom: 15px;
-    @include font-type(null, 18px, 1.17);
-    color: color-get('accent-secondary');
-  }
-
-  &__header {
-    margin-bottom: 26px;
-    @include font-type(null, 34px, 1.15);
-    color: color-get('accent-primary');
-  }
-
-  &__main {
-    position: relative;
-    @include flex-display(column, null, null, center);
-  }
-
   &__background-image {
-    --width: 100%;
     position: absolute;
     bottom: 61px;
     background-image: url('../images/about-bg.png');
@@ -52,9 +20,40 @@
     height: 100%;
   }
 
-  &__description {
-    padding: 50px 30px 0;
+  &__container {
+    position: relative;
+    padding: 125px 20px 0;
+    max-width: 440px;
+    margin: 0 auto;
+    @include flex-display(column, null, null, start);
   }
+
+  &__title {
+    font-family: 'Titan One';
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 26px;
+  }
+
+  &__label {
+    margin-bottom: 15px;
+    @include font-type(null, 18px, 1.17);
+    color: color-get('accent-secondary');
+  }
+
+  &__header {
+    @include font-type(null, 34px, 1.15);
+    color: color-get('accent-primary');
+  }
+
+  &__main {
+    @include flex-display(column, null, null, center);
+  }
+}
+
+.description {
+  padding: 50px 30px 0;
 
   &__info {
     @include font-type(500, 12px, 1.62, 0.01em);
@@ -71,4 +70,69 @@
   &__btn {
     margin-top: 17px;
   }
+}
+
+@include media-mapp('tablet') {
+  .about {
+    &__container {
+      padding: 130px 0 27px;
+      max-width: 700px;
+    }
+
+    &__background-image {
+      display: none;
+    }
+
+    &__title {
+      margin-bottom: 50px;
+    }
+
+    &__label {
+      @include font-type(null, 26px, 1.145);
+      color: color-get('accent-secondary');
+    }
+
+    &__header {
+      @include font-type(null, 48px, 1.145);
+      color: color-get('accent-primary');
+    }
+
+    &__main {
+      flex-direction: unset;
+      @include flex-display(wrap, 20px, null, start);
+    }
+
+    &__bio-eco {
+      @include flex-basis(2, 20px);
+    }
+
+    &__description {
+      @include flex-basis(2, 20px);
+    }
+  }
+
+  .description {
+    padding: 50px 0 0;
+
+    &__info {
+      @include font-type(null, 14px, 1.76, 0.01em);
+    }
+
+    &__btn {
+      margin-top: 45px;
+    }
+  }
+}
+
+@include media-mapp('desktop') {
+  .about {
+    &__container {
+      padding: 125px 0 0;
+      max-width: 1050px;
+    }
+
+    &__background-image {
+      display: block;
+      bottom: 26px;
+    }
 }
