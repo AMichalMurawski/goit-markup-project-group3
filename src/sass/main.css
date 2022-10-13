@@ -239,50 +239,6 @@ svg {
     display: block;
     bottom: 26px;
   }
-  .about__title {
-    margin-bottom: 50px;
-  }
-  .about__label {
-    font-size: 26px;
-    line-height: 1.145;
-    color: #FFA5BA;
-  }
-  .about__header {
-    font-size: 48px;
-    line-height: 1.145;
-    color: #D41443;
-  }
-  .about__main {
-    -webkit-box-orient: unset;
-    -webkit-box-direction: unset;
-        -ms-flex-direction: unset;
-            flex-direction: unset;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    gap: 20px;
-  }
-  .about__bio-eco {
-    -ms-flex-preferred-size: calc((100% - 20px) / 2);
-        flex-basis: calc((100% - 20px) / 2);
-  }
-  .about__description {
-    -ms-flex-preferred-size: calc((100% - 20px) / 2);
-        flex-basis: calc((100% - 20px) / 2);
-  }
-  .description {
-    padding: 50px 0 0;
-  }
-  .description__info {
-    font-size: 14px;
-    line-height: 1.76;
-    letter-spacing: 0.01em;
-  }
-  .description__btn {
-    margin-top: 45px;
-  }
 }
 .modal {
   background-color: #E17992;
