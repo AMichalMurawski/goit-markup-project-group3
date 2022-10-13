@@ -8,6 +8,7 @@
   border-radius: 22px;
   border: none;
   @include transition-add('background-color');
+  cursor: pointer;
 
   &__alternative {
     height: 40px;
