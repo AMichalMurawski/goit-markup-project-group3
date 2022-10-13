@@ -1,12 +1,27 @@
-<header class="hero">
-  <img
-    src="src/images/logo_icecream.jpg"
-    srcset="src/images/logo_icecream@2x.jpg 2x, images/logo_icecream@3x.jpg 3x"
-    alt="Logo IceCream"
-  />
+<link href="../sass/main.css" rel="stylesheet" />
+
+<header class="header__container">
+  <div class="header__logo">
+    <img
+      class=""
+      src="../images/logo_icecream.jpg"
+      srcset="../images/logo_icecream@2x.jpg 2x, ../images/logo_icecream@3x.jpg 3x"
+      alt="Logo IceCream"
+    />
+  </div>
+  <nav class="header__nav--hide">
+    <ul class="header__nav header__list">
+      <li class="header__nav-item"><a class="header__link" href="">Home</a></li>
+      <li class="header__nav-item"><a class="header__link" href="#about">About us</a></li>
+      <li class="header__nav-item"><a class="header__link" href="#how">How it's made?</a></li>
+      <li class="header__nav-item"><a class="header__link" href="#products">Our products</a></li>
+      <li class="header__nav-item"><a class="header__link" href="#contact">Contact</a></li>
+      <li class="header__nav"><a href="#how">How it's made?</a></li>
+    </ul>
+  </nav>
   <button class="mobile__toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
     <svg>
-      <use xlink:href=".src/images/icons.svg#burger" width="24" height="24"></use>
+      <use xlink:href="../images/icons.svg#burger" width="24" height="24"></use>
     </svg>
   </button>
   <h1 class="header__title">
@@ -14,10 +29,55 @@
     Made with<br />
     <span class="header__title--big">Passion</span>
   </h1>
-  <nav>
-    <ul class="header__nav">
-      <li></li>
-      <li></li>
+  <ul class="header__buttons header__list">
+    <li class="header__btn"><a class="header__link" href="#products">Our products</a></li>
+    <li class="header__btn"><a class="header__link" href="#how">How it's made?</a></li>
+  </ul>
+  <div class="header__slider header__slider--main">
+    <img
+      src="../images/logo_icecream.jpg"
+      srcset="../images/logo_icecream@2x.jpg 2x, ../images/logo_icecream@3x.jpg 3x"
+      alt="Logo IceCream"
+    />
+  </div>
+  <div class="header__tablet-desktop-view">
+    <button class="header__buy" type="button" data-modal-open>Buy now &gt;</button>
+    <ul class="header__eatery">
+      <li class="header__eatery-item">
+        <h2 class="header__eatery-number">16</h2>
+        <p class="header__eatery-type">cafes</p>
+        <div class="header__eatery-bubble"></div>
+      </li>
+      <li class="header__eatery-item">
+        <h2 class="header__eatery-number">23</h2>
+        <p class="header__eatery-type">food trucks</p>
+        <div class="header__eatery-bubble"></div>
+      </li>
     </ul>
-  </nav>
+    <div class="header__slider header__slider--milk">
+      <img
+        src="../images/logo_icecream.jpg"
+        srcset="../images/logo_icecream@2x.jpg 2x, ../images/logo_icecream@3x.jpg 3x"
+        alt="Logo IceCream"
+      />
+    </div>
+    <article class="header__post">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et
+      </p>
+    </article>
+    <div class="header__arrow">
+      <svg class="header__icon">
+        <use xlink:href="../images/icons.svg#arrow" width="26px" height="26px"></use>
+      </svg>
+    </div>
+    <div class="header__slider header__slider--girl">
+      <img
+        src="../images/logo_icecream.jpg"
+        srcset="../images/logo_icecream@2x.jpg 2x, ../images/logo_icecream@3x.jpg 3x"
+        alt="Logo IceCream"
+      />
+    </div>
+  </div>
 </header>

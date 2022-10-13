@@ -1,0 +1,17 @@
+@use '../utils/forward' as *;
+
+.header {
+    &__container {
+        position: relative;
+        @include container(20px);
+        background-color: rgb(189, 33, 59);//get('bg-alternative');
+    }
+    &__list {
+        display: inline;
+        list-style-type: none;
+    }
+    &__link {
+        outline: none;
+  text-decoration: none;
+    }
+}
