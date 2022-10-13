@@ -101,7 +101,7 @@ svg {
 .about__background-image {
   position: absolute;
   bottom: 61px;
-  background-image: url("./images/about-bg.png");
+  background-image: url("../../images/about-bg.png");
   background-size: 100%;
   background-position: bottom;
   background-repeat: no-repeat;
