@@ -5,9 +5,50 @@
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
+  background: color-get('bg-secondary');
   &__container {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    padding: 39px 0 97px 20px;
+  }
+  &__header {
+    display: none;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    gap: 38px;
+  }
+  &__item {
+    width: 230px;
+    height: 156px;
+  }
+  &__img {
+    height: 50px;
+    margin-bottom: 19px;
+    &-vanilla {
+      width: 33px;
+    }
+    &-apple {
+      width: 50px;
+    }
+    &-heart {
+      width: 44px;
+    }
+  }
+  &__title {
+    font-family: 'Titan One';
+    line-height: 41px;
+    text-transform: uppercase;
+    @include font-type(normal, header-medium, little, medium);
+    color: color-get('accent-primary');
+    margin-bottom: 19px;
+  }
+  &__text {
+    font-family: 'DM Sans';
+    @include font-type(bold, text-little, null, null);
   }
 }

@@ -107,6 +107,7 @@ svg {
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
+  background: #FFF5F6;
 }
 .advantages__container {
   display: -webkit-box;
@@ -119,6 +120,59 @@ svg {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding: 39px 0 97px 20px;
+}
+.advantages__header {
+  display: none;
+}
+.advantages__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+  gap: 38px;
+}
+.advantages__item {
+  width: 230px;
+  height: 156px;
+}
+.advantages__img {
+  height: 50px;
+  margin-bottom: 19px;
+}
+.advantages__img-vanilla {
+  width: 33px;
+}
+.advantages__img-apple {
+  width: 50px;
+}
+.advantages__img-heart {
+  width: 44px;
+}
+.advantages__title {
+  font-family: "Titan One";
+  line-height: 41px;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 1.13;
+  letter-spacing: 0.04em;
+  color: #D41443;
+  margin-bottom: 19px;
+}
+.advantages__text {
+  font-family: "DM Sans";
+  font-weight: 700;
+  font-size: 12px;
 }
 
 .modal {
