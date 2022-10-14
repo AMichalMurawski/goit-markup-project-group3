@@ -1,1 +1,91 @@
 @use '../utils/forward' as *;
+
+.advantages {
+  min-width: 320px;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  background: color-get('bg-secondary');
+  &__container {
+    @include flex-display(column, null, center, null);
+    padding: 39px 0 97px 20px;
+  }
+  &__header {
+    display: none;
+  }
+  &__list {
+    @include flex-display(column, 38px, center, start);
+  }
+  &__item {
+    width: 230px;
+    height: 156px;
+    position: relative;
+  }
+  &__title {
+    font-family: 'Titan One';
+    line-height: 41px;
+    text-transform: uppercase;
+    @include font-type(normal, header-medium, little, medium);
+    color: color-get('accent-primary');
+    margin-bottom: 19px;
+    display: block;
+
+    &--vanilla-img::before {
+      margin-bottom: 19px;
+      content: url('../images/vanilla-icecream.png');
+      width: 50px;
+      height: 50px;
+      display: block;
+    }
+    &--apple-img::before {
+      margin-bottom: 19px;
+      content: url('../images/apple-icecream.png');
+      width: 50px;
+      height: 50px;
+      display: block;
+    }
+    &--heart-img::before {
+      margin-bottom: 19px;
+      content: url('../images/heart-icecream.png');
+      width: 50px;
+      height: 50px;
+      display: block;
+    }
+  }
+  &__text {
+    font-family: 'DM Sans';
+    @include font-type(bold, text-little, null, null);
+  }
+}
+.gallery {
+  min-width: 320px;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  background: linear-gradient(to bottom, #fff5f6 0 45%, #ffffff 0 100%);
+
+  &__container {
+    display: flex;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  &__title {
+    display: none;
+  }
+  &__img {
+    min-width: 320px;
+    height: 130px;
+
+    & > img {
+      margin: auto;
+      display: block;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  img {
+    width: 360px;
+    height: 100%;
+  }
+}
