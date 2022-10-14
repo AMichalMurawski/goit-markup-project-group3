@@ -3,13 +3,13 @@
 
         <div class="reviews__item-wrapper">
 
-            <div class="reviews__client is-faded is-visible" js-client-1>
-                <div class="reviews__testimolias" js-testimolias>
-                    <img src="./images/person1.jpg" alt="Person 1" class="reviews__photo">
+            <div class="client is-faded is-visible" js-client-1>
+                <div class="client__testimolias">
+                    <img src="images/person1.jpg" alt="Uśmiechnięta kobieta" class="client__photo">
                 </div>
 
-                <div class="reviews__text-wrapper">
-                    <p class="reviews__content" js-content>
+                <div class="client__text-wrapper">
+                    <p class="client__content">
                         Nullam viverra consectetuer. Quisque cursus et, porttitor risus. Aliquam sem. In hendrerit nulla
                         quam
                         nunc, accumsan
@@ -17,41 +17,39 @@
                     </p>
                 </div>
 
-                <div class="reviews__silder">
-                    <span class="reviews__client-name" js-client-name>Emily, Los Angeles</span>
-                </div>
+                <span class="client__name">Emily, Los Angeles</span>
+
             </div>
 
-            <div class="reviews__client is-faded" js-client-2>
-                <div class="reviews__testimolias">
-                    <img src="./images/person2.jpg" alt="Person 2" class="reviews__photo">
+            <div class="client is-faded" js-client-2>
+                <div class="client__testimolias">
+                    <img src="images/person2.jpg" alt="Kobieta w okularach" class="client__photo">
                 </div>
 
-                <div class="reviews__text-wrapper">
-                    <p class="reviews__content" js-content>
+                <div class="client__text-wrapper">
+                    <p class="client__content">
                         Voluptate doloribus consequatur iusto veniam cum temporibus officiis corporis ipsam hic ipsum?
                     </p>
                 </div>
 
-                <div class="reviews__silder">
-                    <span class="reviews__client-name" js-client-name>Lorem, Ipsum dolor</span>
-                </div>
+
+                <span class="client__name">Lorem, Ipsum dolor</span>
+
             </div>
 
-            <div class="reviews__client is-faded" js-client-3>
-                <div class="reviews__testimolias" js-testimolias>
-                    <img src="./images/person3.jpg" alt="Person 3" class="reviews__photo">
+            <div class="client is-faded" js-client-3>
+                <div class="client__testimolias">
+                    <img src="images/person3.jpg" alt="Ciemnoskóra kobieta" class="client__photo">
                 </div>
 
-                <div class="reviews__text-wrapper">
-                    <p class="reviews__content" js-content>
+                <div class="client__text-wrapper">
+                    <p class="client__content">
                         Quasi, sint consectetur temporibus in repudiandae accusamus earum minima?
                     </p>
                 </div>
 
-                <div class="reviews__silder">
-                    <span class="reviews__client-name" js-client-name>Sit, Amet Consectetur</span>
-                </div>
+                <span class="client__name">Sit, Amet Consectetur</span>
+
             </div>
 
         </div>
@@ -59,21 +57,30 @@
         <div class="reviews__control" js-control>
             <ul class="reviews__list">
                 <li class="reviews__item">
-                    <button class="reviews__control-btn" js-btn-1>
-                        <svg class="reviews__icon">
+                    <button class="reviews__control-btn" data-btnindex="0">
+                        <svg class="reviews__icon is-faded">
                             <use href="./images/slider-icons.svg#icon-home"></use>
+                        </svg>
+                        <svg class="reviews__icon icon-hidden">
+                            <use href="./images/slider-icons.svg#icon-dot"></use>
                         </svg>
                     </button>
                 </li>
                 <li class="reviews__item">
-                    <button class="reviews__control-btn" js-btn-2>
+                    <button class="reviews__control-btn" data-btnindex="1">
+                        <svg class="reviews__icon icon-hidden is-faded">
+                            <use href="./images/slider-icons.svg#icon-home"></use>
+                        </svg>
                         <svg class="reviews__icon">
                             <use href="./images/slider-icons.svg#icon-dot"></use>
                         </svg>
                     </button>
                 </li>
                 <li class="reviews__item">
-                    <button class="reviews__control-btn" js-btn-3>
+                    <button class="reviews__control-btn" data-btnindex="2">
+                        <svg class="reviews__icon icon-hidden is-faded">
+                            <use href="./images/slider-icons.svg#icon-home"></use>
+                        </svg>
                         <svg class="reviews__icon">
                             <use href="./images/slider-icons.svg#icon-dot"></use>
                         </svg>
