@@ -1,6 +1,6 @@
 @use '../utils/forward' as *;
 
-.reviews {
+.reviews__container {
     @include mix-container(80px 20px 86px);
     background-color: color-get('text-alternative');
     display: flex;
