@@ -6,17 +6,17 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
-
-@media screen and (min-width:768px) {
-    .reviews__container{
-        @include mix-container(105px 68px 135px);
+    
+    @media screen and (min-width:768px) {
+        &{
+            @include mix-container(105px 68px 135px);
+        }
     }
-}
-
-@media screen and (min-width:1200px) {
-    .reviews__container {
-        @include mix-container(123px 177px 135px);
+    
+    @media screen and (min-width:1200px) {
+        &{
+            @include mix-container(123px 177px 135px);
+        }
     }
 }
 
@@ -24,34 +24,22 @@
     display: none;
 }
 
-.is-visible {
-    display: block;
-}
-
-.icon-hidden {
-    display: none;
-}
-
-.is-faded {
-    animation: fadeIn 700ms ease-in;
-}
-
 .client__testimolias {
     display: flex;
     justify-content: center;
     margin: auto;
     margin-bottom: 29px;
-}
-
-@media screen and (min-width: 768px) {
-    .client__testimolias {
-        margin-bottom: 19px;
+   
+    @media screen and (min-width: 768px) {
+        &{
+            margin-bottom: 19px;
+        }
     }
-}
 
-@media screen and (min-width: 1200px) {
-    .client__testimolias {
-        margin-bottom: 15px;
+    @media screen and (min-width: 1200px) {
+        &{
+            margin-bottom: 15px;
+        }
     }
 }
 
@@ -64,7 +52,7 @@
 .client__text-wrapper {
     position: relative;
     background-color: color-get('bg-testimonials');
-    padding: 50px 50px 26px;
+    padding: 43px 50px 20px;
 
     &::before {
         position: absolute;
@@ -73,20 +61,32 @@
         left: 61px;
     }
 }
+    // For client__text-wrapper
 
-@media screen and (min-width: 768px) {
+    @media screen and (min-width: 768px) {
     .client__text-wrapper {
-        padding: 46px 36px 29px;
-    }
-}
+        padding: 47px 36px 28px 60px;
 
-@media screen and (min-width: 1200px) {
-    .client__text-wrapper {
-        padding: 47px 59px 32px;
+        &::before {
+            top: 30px;
+            left: 40px;
+        }
     }
-}
+    }
+
+    @media screen and (min-width: 1200px) {
+    .client__text-wrapper {
+        padding: 47px 54px 32px 50px;
+
+        &::before {
+            top: 32px;
+            left: 50px;
+        }
+    }
+    }
 
 .client__content {
+    padding: 0px 16px 6px 7px;
     position: relative;
     margin: auto;
     font-family: 'DM Sans';
@@ -99,20 +99,22 @@
     color: color-get("text-primary");
     background:
         repeating-linear-gradient(to bottom, transparent 0 calc(1.8em - 1px), color-get("brd-primary") 0 1.8em) transparent;
-}
+    
+    @media screen and (min-width: 768px) {
+        &{
+            letter-spacing: 0.04em;
+            padding: 0px 44px 6px 20px;
+        }
+    }
 
-@media screen and (min-width: 768px) {
-    .client__content {
-        padding: 0px 20px 0px;
+    @media screen and (min-width: 1200px) {
+        &{
+            padding: 0px 35px 7px 28px;
+        }
     }
 }
 
-@media screen and (min-width: 768px) {
-    .client__content {
-        padding: 0px 28px 0px;
-    }
-}
-
+    
 .client__name {
     font-family: 'DM Sans';
     font-style: normal;
@@ -141,27 +143,30 @@
         }
 }
 
-@media screen and (min-width:768px) {
-    .client__name{
-        font-size: 16px;
-        margin-top: 42px;
-        
-        &::before {
-            top: -14px;
-        }
-    }
-}
+    // For client__name
 
-@media screen and (min-width:768px) {
-    .client__name {
-        font-size: 20px;
-        margin-top: 34px;
-    
-        &::before {
-            top: -20px;
+    @media screen and (min-width:768px) {
+        .client__name {
+            font-size: 16px;
+            margin-top: 42px;
+        
+            &::before {
+                top: -14px;
+            }
         }
     }
-}
+
+    @media screen and (min-width:1200px) {
+        .client__name {
+            font-size: 20px;
+            margin-top: 34px;
+
+            &::before {
+                top: -15px;
+            }
+        }
+    }
+
 
 .reviews__list {
     margin-top: 30px;
@@ -170,11 +175,11 @@
     gap: 18px;
     border: none;
     justify-content: center;
-}
-
-@media screen and (min-width:768px) {
-    .reviews__list {
-        margin-top: 35px 0;
+    
+    @media screen and (min-width:768px) {
+        &{
+            margin-top: 35px 0;
+        }
     }
 }
 
@@ -192,6 +197,9 @@
     pointer-events: none;
 }
 
+
+//Additional classes used to slider.js. Should stay here.
+
 @keyframes fadeIn {
     0% {
         opacity: 0%;
@@ -200,4 +208,16 @@
     100% {
         opacity: 100%;
     }
+}
+
+.is-visible {
+    display: block;
+}
+
+.icon-hidden {
+    display: none;
+}
+
+.is-faded {
+    animation: fadeIn 700ms ease-in;
 }
