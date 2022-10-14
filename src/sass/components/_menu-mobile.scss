@@ -1,0 +1,103 @@
+@use '../utils/forward' as *; 
+ 
+.menu__container{ 
+    z-index: 999; 
+    position: fixed; 
+    top: 0px; 
+    right: 0px; 
+    width: 250px; 
+    height: 100vw; 
+    background-color: color-get("bg-mobile"); 
+    padding: 60px 0px 0px 0px; 
+    box-shadow: drop-shadow(-8px 0px 20px rgba(0, 0, 0, 0.25)); 
+    // transform: translateY(100%); 
+} 
+ 
+@media screen and (min-width: 768px) { 
+    .menu__container { 
+        width: 254px; 
+    } 
+} 
+ 
+@media screen and (min-width: 1200px) { 
+    .menu__container { 
+        display: none; 
+    } 
+} 
+ 
+.btn__menu{ 
+    margin: auto; 
+    width: 209px; 
+} 
+ 
+@media screen and (min-width: 1200px) { 
+    .btn__menu { 
+        width: 186px; 
+    } 
+} 
+ 
+.menu__close-button{ 
+    position: absolute; 
+    top:23px; 
+    right: 28px; 
+    background-color: transparent; 
+    border: none; 
+    width: 14px; 
+    height: 14px; 
+    color: color-get("text-alternative"); 
+} 
+ 
+@media screen and (min-width: 1200px) { 
+    .menu__close-button { 
+        right: 34px; 
+    } 
+} 
+ 
+.menu__close-icon{ 
+    cursor: pointer; 
+    width: 14px; 
+    height: 14px; 
+    fill: currentColor; 
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+     
+        &:hover, 
+        &:focus { 
+            color: color-get("accent-primary"); 
+        } 
+} 
+ 
+.menu__list{ 
+    margin-top: 19px; 
+} 
+ 
+.menu__item{ 
+    border-top: 1px solid color-get("brd-menu"); 
+    padding-top: 13px; 
+    padding-left: 21px; 
+    padding-bottom: 11px; 
+ 
+    &:last-child{ 
+        border-bottom: 1px solid color-get("brd-menu"); 
+    } 
+} 
+ 
+@media screen and (min-width: 768px) { 
+    .menu__item { 
+        padding-left: 24px; 
+    } 
+} 
+ 
+.menu__link{ 
+    text-decoration: none; 
+    font-family: 'DM Sans'; 
+    font-weight: 700; 
+    font-size: 14px; 
+    line-height: 1.28; 
+    color: color-get("text-alternative"); 
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+ 
+    &:hover, 
+    &:focus{ 
+        color: color-get("accent-primary"); 
+    } 
+}
