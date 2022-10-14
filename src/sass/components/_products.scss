@@ -36,14 +36,13 @@
 
   &__item {
     width: 280px;
-    padding: 161px 40px 40px;
     margin: 0 auto;
     border-radius: 24px;
     @include flex-basis(1, 1px);
   }
 
   &__item:not(:last-child) {
-    margin-bottom: 16px;
+    margin-bottom: 130px;
   }
 
   &__item--1 {
