@@ -1,8 +1,26 @@
-<div class="modal">
-  <h4>Hello there</h4>
-  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-  <p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae hic doloremque voluptates
-    recusandae, nihil esse!
-  </p>
+<!-- LOCAL HOST:
+npm run dev
+ -->
+<button type="button" class="btn btn__secondary" data-modal-open>Open</button>
+<!-- data-modal-open -->
+<!-- is-hidden -->
+<div class="modal is-hidden" data-modal>
+  <!-- data-modal -->
+  <div class="modal__container">
+    <div class="modal__option">
+      <div class="modal__box">
+        <p class="modal__text">Want to dine in?</p>
+        <button type="button" class="btn">Book table</button>
+      </div>
+      <div class="modal__box">
+        <p class="modal__text">Remote refresh?</p>
+        <button type="button" class="btn">Order home</button>
+        <!-- <ul>
+            <li><svg></svg></li>
+          </ul> -->
+      </div>
+    </div>
+    <!-- data-modal-close -->
+    <button type="button" class="btn btn__secondary modal__btn" data-modal-close>Cancel</button>
+  </div>
 </div>

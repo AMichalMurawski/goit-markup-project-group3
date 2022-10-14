@@ -1,7 +1,65 @@
 @use '../utils/forward' as *;
 
-
+.is-hidden {
+  opacity: 50%;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 300ms ease-in-out, visibility 300ms linear;
+}
 
 .modal {
+  background: rgba(0, 0, 0, 0.2);
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 12;
+
+  &__container {
+    margin: 0 ;
+    padding: 40px 10px 80px;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 320px;
+    max-width: 480px;
+    width: 100%;
     background-color: color-get('bg-mobile');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  &__option {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  &__box {
+    background-color: color-get('bg-alternative');
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 5%;
+    width: 200px;
+  }
+  &__text {
+    font-family: 'DM Sans';
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.28;
+    color: color-get('text-alternative');
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  &__btn {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
 }
