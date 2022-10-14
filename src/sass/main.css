@@ -41,6 +41,28 @@ svg {
   stroke: currentColor;
 }
 
+.section {
+  width: 100%;
+  min-width: 320px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.section__container {
+  padding: 125px 20px 0;
+  max-width: 440px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .section__container {
+    max-width: 700px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .section__container {
+    max-width: 1050px;
+  }
+}
 .btn {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -189,10 +211,6 @@ svg {
 
 .about {
   position: relative;
-  width: 100%;
-  min-width: 320px;
-  max-width: 1200px;
-  margin: 0 auto;
   background-color: #FFF5F6;
 }
 .about__background-image {
@@ -207,9 +225,6 @@ svg {
 }
 .about__container {
   position: relative;
-  padding: 125px 20px 0;
-  max-width: 440px;
-  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -274,7 +289,6 @@ svg {
 @media screen and (min-width: 768px) {
   .about__container {
     padding: 130px 0 27px;
-    max-width: 700px;
   }
   .about__background-image {
     display: none;
@@ -330,7 +344,6 @@ svg {
 @media screen and (min-width: 1200px) {
   .about__container {
     padding: 125px 0 0;
-    max-width: 1050px;
   }
   .about__background-image {
     display: block;

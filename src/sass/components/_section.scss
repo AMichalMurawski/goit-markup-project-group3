@@ -1,0 +1,26 @@
+@use '../utils/forward' as *;
+
+.section {
+  width: 100%;
+  min-width: 320px;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  &__container {
+    padding: 125px 20px 0;
+    max-width: 440px;
+    margin: 0 auto;
+  }
+}
+
+@include media-mapp('tablet') {
+  .section__container {
+    max-width: 700px;
+  }
+}
+
+@include media-mapp('desktop') {
+  .section__container {
+    max-width: 1050px;
+  }
+}
