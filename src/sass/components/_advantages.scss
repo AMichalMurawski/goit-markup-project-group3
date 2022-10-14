@@ -62,22 +62,29 @@
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
+  background: linear-gradient(to bottom, #fff5f6 0 45%, #fafafa 0 100%);
 
+  &__container {
+    display: flex;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
   &__title {
     display: none;
   }
+  &__img {
+    min-width: 320px;
+    height: 130px;
+
+    & > img {
+      display: block;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  img {
+    width: 360px;
+    height: 100%;
+  }
 }
-//   &__bg-img {
-//     background-size: 100%;
-//     background-size: cover;
-//     background-position: 50% 50%;
-//     background-repeat: no-repeat;
-//     background-position: center;
-//     background-image: linear-gradient(
-//       to bottom,
-//       color-get('bg-secondary') 50%,
-//       color-get('bg-primary') 50%,
-//       url('../images/gallery-mobile.png')
-//     );
-//   }
-// }
