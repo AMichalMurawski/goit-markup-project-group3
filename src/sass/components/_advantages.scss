@@ -7,20 +7,14 @@
   margin: 0 auto;
   background: color-get('bg-secondary');
   &__container {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+    @include flex-display(column, null, center, null);
     padding: 39px 0 97px 20px;
   }
   &__header {
     display: none;
   }
   &__list {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: left;
-    gap: 38px;
+    @include flex-display(column, 38px, center, start);
   }
   &__item {
     width: 230px;
@@ -63,3 +57,27 @@
     @include font-type(bold, text-little, null, null);
   }
 }
+.gallery {
+  min-width: 320px;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+
+  &__title {
+    display: none;
+  }
+}
+//   &__bg-img {
+//     background-size: 100%;
+//     background-size: cover;
+//     background-position: 50% 50%;
+//     background-repeat: no-repeat;
+//     background-position: center;
+//     background-image: linear-gradient(
+//       to bottom,
+//       color-get('bg-secondary') 50%,
+//       color-get('bg-primary') 50%,
+//       url('../images/gallery-mobile.png')
+//     );
+//   }
+// }
