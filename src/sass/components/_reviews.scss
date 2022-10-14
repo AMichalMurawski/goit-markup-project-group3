@@ -20,7 +20,7 @@
     }
 }
 
-.reviews__client {
+.client {
     display: none;
 }
 
@@ -36,7 +36,7 @@
     animation: fadeIn 700ms ease-in;
 }
 
-.reviews__testimolias {
+.client__testimolias {
     display: flex;
     justify-content: center;
     margin: auto;
@@ -44,24 +44,24 @@
 }
 
 @media screen and (min-width: 768px) {
-    .reviews__testimolias {
+    .client__testimolias {
         margin-bottom: 19px;
     }
 }
 
 @media screen and (min-width: 1200px) {
-    .reviews__testimolias {
+    .client__testimolias {
         margin-bottom: 15px;
     }
 }
 
-.reviews__photo {
+.client__photo {
     width: 85px;
     width: 85px;
     border-radius: 50px;
 }
 
-.reviews__text-wrapper {
+.client__text-wrapper {
     position: relative;
     background-color: color-get('bg-testimonials');
     padding: 50px 50px 26px;
@@ -75,18 +75,18 @@
 }
 
 @media screen and (min-width: 768px) {
-    .reviews__text-wrapper {
+    .client__text-wrapper {
         padding: 46px 36px 29px;
     }
 }
 
 @media screen and (min-width: 1200px) {
-    .reviews__text-wrapper {
+    .client__text-wrapper {
         padding: 47px 59px 32px;
     }
 }
 
-.reviews__content {
+.client__content {
     position: relative;
     margin: auto;
     font-family: 'DM Sans';
@@ -102,18 +102,18 @@
 }
 
 @media screen and (min-width: 768px) {
-    .reviews__content {
+    .client__content {
         padding: 0px 20px 0px;
     }
 }
 
 @media screen and (min-width: 768px) {
-    .reviews__content {
+    .client__content {
         padding: 0px 28px 0px;
     }
 }
 
-.reviews__client-name {
+.client__name {
     font-family: 'DM Sans';
     font-style: normal;
     font-weight: 500;
@@ -142,7 +142,7 @@
 }
 
 @media screen and (min-width:768px) {
-    .reviews__client-name{
+    .client__name{
         font-size: 16px;
         margin-top: 42px;
         
@@ -153,7 +153,7 @@
 }
 
 @media screen and (min-width:768px) {
-    .reviews__client-name {
+    .client__name {
         font-size: 20px;
         margin-top: 34px;
     
