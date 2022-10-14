@@ -328,8 +328,8 @@ svg {
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff5f6), color-stop(0, #fafafa));
-  background: linear-gradient(to bottom, #fff5f6 0 45%, #fafafa 0 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff5f6), color-stop(0, #ffffff));
+  background: linear-gradient(to bottom, #fff5f6 0 45%, #ffffff 0 100%);
 }
 .gallery__container {
   display: -webkit-box;
