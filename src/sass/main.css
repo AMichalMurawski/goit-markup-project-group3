@@ -144,19 +144,7 @@ svg {
 .advantages__item {
   width: 230px;
   height: 156px;
-}
-.advantages__img {
-  height: 50px;
-  margin-bottom: 19px;
-}
-.advantages__img-vanilla {
-  width: 33px;
-}
-.advantages__img-apple {
-  width: 50px;
-}
-.advantages__img-heart {
-  width: 44px;
+  position: relative;
 }
 .advantages__title {
   font-family: "Titan One";
@@ -168,6 +156,28 @@ svg {
   letter-spacing: 0.04em;
   color: #D41443;
   margin-bottom: 19px;
+  display: block;
+}
+.advantages__title--vanilla-img::before {
+  margin-bottom: 19px;
+  content: url("../images/vanilla-icecream.png");
+  width: 50px;
+  height: 50px;
+  display: block;
+}
+.advantages__title--apple-img::before {
+  margin-bottom: 19px;
+  content: url("../images/apple-icecream.png");
+  width: 50px;
+  height: 50px;
+  display: block;
+}
+.advantages__title--heart-img::before {
+  margin-bottom: 19px;
+  content: url("../images/heart-icecream.png");
+  width: 50px;
+  height: 50px;
+  display: block;
 }
 .advantages__text {
   font-family: "DM Sans";
