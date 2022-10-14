@@ -8,6 +8,12 @@ body {
   background-color: #E5E5E5;
 }
 
+body::-webkit-scrollbar {
+  display: none;
+  width: 10px;
+  border: 10px solid rgba(0, 0, 0, 0.25);
+}
+
 h1,
 h2,
 h3,
@@ -15,7 +21,8 @@ h4,
 h5,
 p,
 ul,
-figure {
+figure,
+button {
   margin: 0;
   padding: 0;
 }
@@ -57,6 +64,7 @@ svg {
   border: none;
   -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
 }
 .btn__alternative {
   height: 40px;
@@ -83,13 +91,28 @@ svg {
 }
 
 .about {
+  position: relative;
   width: 100%;
   min-width: 320px;
   max-width: 1200px;
   margin: 0 auto;
+  background-color: #FFF5F6;
+}
+.about__background-image {
+  position: absolute;
+  bottom: 61px;
+  background-image: url("../../images/about-bg.png");
+  background-size: 100%;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
 }
 .about__container {
-  padding: 125px 50px 0;
+  position: relative;
+  padding: 125px 20px 0;
+  max-width: 440px;
+  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -101,7 +124,122 @@ svg {
       -ms-flex-align: start;
           align-items: start;
 }
+.about__title {
+  font-family: "Titan One";
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 26px;
+}
+.about__label {
+  margin-bottom: 15px;
+  font-size: 18px;
+  line-height: 1.17;
+  color: #FFA5BA;
+}
+.about__header {
+  font-size: 34px;
+  line-height: 1.15;
+  color: #D41443;
+}
+.about__main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
 
+.description {
+  padding: 50px 30px 0;
+}
+.description__info {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.62;
+  letter-spacing: 0.01em;
+}
+.description__info--color {
+  color: #907E82;
+}
+.description__info:first-of-type {
+  margin-bottom: 29px;
+}
+.description__btn {
+  margin-top: 17px;
+}
+
+@media screen and (min-width: 768px) {
+  .about__container {
+    padding: 130px 0 27px;
+    max-width: 700px;
+  }
+  .about__background-image {
+    display: none;
+  }
+  .about__title {
+    margin-bottom: 50px;
+  }
+  .about__label {
+    font-size: 26px;
+    line-height: 1.145;
+    color: #FFA5BA;
+  }
+  .about__header {
+    font-size: 48px;
+    line-height: 1.145;
+    color: #D41443;
+  }
+  .about__main {
+    -webkit-box-orient: unset;
+    -webkit-box-direction: unset;
+        -ms-flex-direction: unset;
+            flex-direction: unset;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 20px;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+  }
+  .about__bio-eco {
+    -ms-flex-preferred-size: calc((100% - 20px) / 2);
+        flex-basis: calc((100% - 20px) / 2);
+  }
+  .about__description {
+    -ms-flex-preferred-size: calc((100% - 20px) / 2);
+        flex-basis: calc((100% - 20px) / 2);
+  }
+  .description {
+    padding: 50px 0 0;
+  }
+  .description__info {
+    font-size: 14px;
+    line-height: 1.76;
+    letter-spacing: 0.01em;
+  }
+  .description__btn {
+    margin-top: 45px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .about__container {
+    padding: 125px 0 0;
+    max-width: 1050px;
+  }
+  .about__background-image {
+    display: block;
+    bottom: 26px;
+  }
+}
 .modal {
   background-color: #E17992;
 }

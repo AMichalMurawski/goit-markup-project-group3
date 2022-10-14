@@ -7,6 +7,12 @@ body {
   background-color: color-get('bg-primary');
 }
 
+body::-webkit-scrollbar {
+  display:none;
+  width: 10px;
+  border: 10px solid rgba(0, 0, 0, 0.25);
+}
+
 h1,
 h2,
 h3,
@@ -14,7 +20,8 @@ h4,
 h5,
 p,
 ul,
-figure {
+figure,
+button {
   margin: 0;
   padding: 0;
 }
