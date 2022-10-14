@@ -1,0 +1,10 @@
+@use '../utils/forward' as *;
+
+// poniżej piszemy kod scss
+
+.table {
+  border: 1px solid black;
+  &__head {
+    color: red;
+  }
+}

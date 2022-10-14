@@ -1,0 +1,43 @@
+@use '../utils/forward' as *;
+
+.btn {
+  @include flex-display(row, 12px, center, center);
+  @include font-type(700, 16px);
+  height: 44px;
+  padding-inline: 37px;
+  border-radius: 22px;
+  border: none;
+  @include transition-add('background-color');
+  cursor: pointer;
+
+  &__alternative {
+    height: 40px;
+    padding-inline: 20px;
+    border-radius: 20px;
+  }
+
+  &__primary {
+    color: color-get('btn-bg');
+    background-color: color-get('text-alternative');
+
+    &:hover,
+    &:focus {
+      background-color: #ecebeb;
+    }
+  }
+
+  &__secondary {
+    color: color-get('text-alternative');
+    background-color: color-get('btn-bg');
+
+    &:hover,
+    &:focus {
+      background-color: #c7133e;
+    }
+  }
+
+  &__icon {
+    width: 6.5px;
+    height: 10px;
+  }
+}
