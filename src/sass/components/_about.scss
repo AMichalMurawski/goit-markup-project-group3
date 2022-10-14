@@ -2,10 +2,6 @@
 
 .about {
   position: relative;
-  width: 100%;
-  min-width: 320px;
-  max-width: 1200px;
-  margin: 0 auto;
   background-color: color-get('bg-secondary');
   // padding-bottom: 100px; //do usunięcia
 
@@ -22,9 +18,6 @@
 
   &__container {
     position: relative;
-    padding: 125px 20px 0;
-    max-width: 440px;
-    margin: 0 auto;
     @include flex-display(column, null, null, start);
   }
 
@@ -76,7 +69,6 @@
   .about {
     &__container {
       padding: 130px 0 27px;
-      max-width: 700px;
     }
 
     &__background-image {
@@ -128,7 +120,6 @@
   .about {
     &__container {
       padding: 125px 0 0;
-      max-width: 1050px;
     }
 
     &__background-image {
