@@ -1,6 +1,5 @@
 $colors: (
   // Text, links
-
   'text-primary': #000000,
   'text-secondary': #907E82,
   'text-alternative': #FFFFFF,
@@ -8,8 +7,7 @@ $colors: (
   'accent-secondary': #FFA5BA,
 
   // Background
-
-  'bg-primary':#E5E5E5,
+  'bg-primary':#FFFFFF,
   'bg-secondary':#FFF5F6,
   'bg-alternative':#FFB8CA,
   'bg-decorative':#FFA5BA,
@@ -17,13 +15,14 @@ $colors: (
   'bg-testimonials':#FAFAFA,
 
   // For products section items
-
   'first-chld':#FFB8CA,
   'second-chld':#F0D1A5,
   'third-chld': #C2E297,
 
   // Buttons
   'btn-bg':#D41342,
+  'btn-bg-secondary':#C7133E,
+  'btn-bg-alternative': #ECEBEB,
 
   // Borders
   'brd-primary':#E1E1E1,
