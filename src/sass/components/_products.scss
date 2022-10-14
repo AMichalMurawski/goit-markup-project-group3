@@ -1,93 +1,103 @@
 @use '../utils/forward' as *;
 
 .products {
-    min-width: 320px;
+  min-width: 320px;
+  max-width: 1200px;
+  width: 100%;
+
+  &__container {
     max-width: 768px;
-    width: 100%;
+    margin: 0 auto;
+    padding: 121px 20px 98px;
+  }
 
-&__label {
-  font-weight: 400px;
-  font-size: 18px;
-  text-align: center;
-}
+  &__label {
+    font-weight: 400px;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    text-transform: uppercase;
+  }
 
-&__headline {
-  font-weight: 400;
-  font-size: 34px;
-  text-align: center;
-}
+  &__headline {
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 39px;
+    letter-spacing: 4%;
+    text-align: center;
+    text-transform: uppercase;
+  }
 
-&__list {
-  list-style: none;
-}
+  &__list {
+    list-style: none;
+    margin-top: 144px;
+    @include flex-display(wrap, 130px);
+  }
 
-&__item {
-  width: 280px;
-  height: 485px;
-  margin: 0 auto;
-  margin-bottom: 16px;
-  border-radius: 24px;
-}
+  &__item {
+    width: 280px;
+    padding: 161px 40px 40px;
+    margin: 0 auto;
+    border-radius: 24px;
+    @include flex-basis(1, 1px);
+  }
 
-&__item:not(:last-child) {
-  margin-bottom: 133px;
-}
+  &__item:not(:last-child) {
+    margin-bottom: 16px;
+  }
 
-&__item--1 {
-  color: $first-chld;
-  margin-top: 144px;
-}
+  &__item--1 {
+    background-color: color-get('first-chld');
+  }
 
-&__item--2 {
-  color: $second-chld;
-}
+  &__item--2 {
+    background-color: color-get('second-chld');
+  }
 
-&__item--3 {
-  color: $third-chld;
-  margin-bottom: 98px;
-}
+  &__item--3 {
+    background-color: color-get('third-chld');
+  }
 
-&__name {
-  color: $bg-secondary;
-  font-weight: 400;
-  font: 20px;
-  letter-spacing: 4%;
-  text-transform: uppercase;
-  position: relative;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding-top: 161px;
-}
+  &__name {
+    color: $bg-secondary;
+    font-weight: 400;
+    font-size: 20px;
+    letter-spacing: 4%;
+    text-transform: uppercase;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 161px;
+  }
 
-&__name::after {
-  content: url(../images/dots.png);
-  position: absolute;
-  transform: translate(-260%, 200%);
-}
+  &__name::after {
+    content: url(../images/dots.png);
+    position: absolute;
+    transform: translate(-260%, 200%);
+  }
 
-&__name--1::before {
-  content: url(../images/products-icecream.png);
-  position: absolute;
-  transform: translate(-28%, -107%);
-}
+  &__name--1::before {
+    content: url(../images/products-icecream.png);
+  }
 
-&__name--2::before {
-  content: url(../images/products-coffee.png);
-  position: absolute;
-  transform: translate(-28%, -107%);
-}
+  &__name--2::before {
+    content: url(../images/products-coffee.png);
+  }
 
-&__name--3::before {
-  content: url(../images/products-milkshake.png);
-  position: absolute;
-  transform: translate(-25%, -107%);
-}
+  &__name--3::before {
+    content: url(../images/products-milkshake.png);
+  }
 
-&__description {
-  text-align: center;
-  padding: 0 41px;
-  padding-top: 66px;
-  color: white;
-}
+  &__name:nth-child(1)::before {
+    position: absolute;
+    transform: translate(-28%, -107%);
+  }
+
+  &__description {
+    text-align: center;
+    padding: 0 41px;
+    padding-top: 66px;
+    color: white;
+  }
 }
