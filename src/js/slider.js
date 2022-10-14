@@ -10,19 +10,35 @@
                  client3 = document.querySelector('[js-client-3]'),]
     }
 
+
     let actualClientIndex = 0;
     const lastClientIndex = refs.clients.length - 1;
-    
-    const nextClient = () => {
+
+
+    //Client functions
+
+    const removeClient = () => {
         refs.clients[actualClientIndex].classList.remove('is-visible');
         refs.buttons[actualClientIndex].firstElementChild.classList.add('icon-hidden');
-        refs.buttons[actualClientIndex].lastElementChild.classList.remove('icon-hidden');
-        actualClientIndex++;
+        refs.buttons[actualClientIndex].lastElementChild.classList.remove('icon-hidden');    
+    }
+    
+    const addClient = () => {
         if (actualClientIndex > lastClientIndex) { actualClientIndex = 0; }
         refs.clients[actualClientIndex].classList.add('is-visible');
         refs.buttons[actualClientIndex].firstElementChild.classList.remove('icon-hidden');
-        refs.buttons[actualClientIndex].lastElementChild.classList.add('icon-hidden');
+        refs.buttons[actualClientIndex].lastElementChild.classList.add('icon-hidden');    
+    }
+
+    const nextClient = () => {
+        removeClient();
+        actualClientIndex++;
+        addClient();
     };
+
+    //--------------------
+
+    //Interval and autoplay slider
 
     let mainInterval = setInterval(nextClient, 5000);
 
@@ -31,23 +47,21 @@
         mainInterval = setInterval(nextClient, 5000);
     }
 
+    //--------------------
+
+    //Slider manual control
+
     refs.control.addEventListener("click", (e) => {
        
         if (e.target.nodeName === "BUTTON") {
-            
-            refs.clients[actualClientIndex].classList.remove('is-visible');
-            refs.buttons[actualClientIndex].firstElementChild.classList.add('icon-hidden');
-            refs.buttons[actualClientIndex].lastElementChild.classList.remove('icon-hidden');
+            removeClient();
             actualClientIndex = Number(e.target.dataset.btnindex);
-            if (actualClientIndex > lastClientIndex) { actualClientIndex = 0; }
-            refs.clients[actualClientIndex].classList.add('is-visible');
-            refs.buttons[actualClientIndex].firstElementChild.classList.remove('icon-hidden');
-            refs.buttons[actualClientIndex].lastElementChild.classList.add('icon-hidden');
+            addClient();
             resetMainInterval();
          }   
-       
-    
-    });
   
+    });
+    
+     //--------------------
 
 })();
