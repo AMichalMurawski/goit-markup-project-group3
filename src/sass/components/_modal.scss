@@ -1,11 +1,11 @@
 @use '../utils/forward' as *;
 
-.is-hidden {
-  opacity: 50%;
-  visibility: hidden;
-  pointer-events: none;
-  transition: opacity 300ms ease-in-out, visibility 300ms linear;
-}
+// .is-hidden {
+//   // opacity: 50%;
+//   // visibility: hidden;
+//   // pointer-events: none;
+//   // transition: opacity 300ms ease-in-out, visibility 300ms linear;
+// }
 
 .modal {
   background: rgba(0, 0, 0, 0.2);
@@ -39,14 +39,17 @@
   &__option {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
     gap: 20px;
     flex-wrap: wrap;
   }
   &__box {
     background-color: color-get('bg-alternative');
+    @include flex-basis(2, 20px);
+    flex: 1;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     padding: 10px;
     border-radius: 5%;
     width: 200px;
