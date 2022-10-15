@@ -4,7 +4,7 @@
   background: color-get('bg-secondary');
   &__container {
     @include flex-display(column, null, center, null);
-    padding: 39px 0 97px 20px;
+    padding: 39px 20px 97px 20px;
     max-width: 440px;
     margin: 0 auto;
   }
@@ -13,9 +13,10 @@
   }
   &__list {
     @include flex-display(column, 38px, center, start);
+    min-height: 570px;
   }
   &__item {
-    min-width: 230px;
+    max-width: 230px;
     height: 156px;
     position: relative;
   }
@@ -52,8 +53,8 @@
   }
   &__text {
     font-family: 'DM Sans';
-    @include font-type(bold, text-little, medium, null);
-    min-width: 230px;
+    @include font-type(bold, text-little, medium, small);
+    max-width: 230px;
   }
 }
 .gallery {
@@ -75,30 +76,37 @@
   }
   &__img {
     min-width: 320px;
-    min-height: 130px;
+    max-height: 130px;
 
     & > img {
       margin: auto;
       display: block;
       height: 100%;
       width: 100%;
-      object-fit: cover;
+      object-fit: fill;
     }
   }
   img {
     min-width: 330px;
-    height: 100%;
+    max-width: 500px;
+    min-height: 122px;
+    max-height: 150px;
   }
 }
-
 @media screen and (min-width: 768px) {
   .advantages {
     &__container {
-      padding: 66px 0 140px 36px;
+      padding: 66px 20px 140px 20px;
       max-width: 700px;
     }
     &__list {
-      @include flex-display(row, 66px, center, start);
+      flex-direction: row;
+      gap: 60px;
+      min-height: 200px;
+    }
+    &__item {
+      height: 226px;
+      max-width: 190px;
     }
     &__title {
       line-height: 55px;
@@ -106,46 +114,53 @@
       margin-bottom: 16px;
 
       &--vanilla-img::before {
-        margin-bottom: 36px;
+        margin-bottom: 16px;
       }
       &--apple-img::before {
-        margin-bottom: 36px;
+        margin-bottom: 16px;
       }
       &--heart-img::before {
-        margin-bottom: 36px;
+        margin-bottom: 16px;
       }
     }
     &__text {
       @include font-type(bold, text-small, medium, null);
+      max-width: 180px;
     }
   }
   .gallery {
+    background: linear-gradient(to bottom, #fff5f6 0 55%, #ffffff 0 100%);
     &__container {
-      padding-left: 50px;
-      padding-right: 50px;
+      padding: 0 20px 130px 20px;
       max-width: 700px;
+      max-height: 300px;
     }
-
     &__img {
-      min-width: 786px;
-      min-height: 264px;
+      min-width: 500px;
+      max-height: 200px;
     }
     img {
-      min-width: 660px;
-      height: 100%;
+      min-width: 400px;
+      max-width: 800px;
+      min-height: 150px;
+      max-height: 250px;
     }
   }
 }
-
 @media screen and (min-width: 1200px) {
   .advantages {
     &__container {
-      padding: 39px 0 139px 115px;
+      padding: 139px 20px 140px 20px;
       max-width: 1050px;
-      margin: 0;
     }
     &__list {
-      @include flex-display(row, 50px, center, start);
+      flex-direction: row;
+      gap: 30px;
+      min-height: 222px;
+    }
+    &__item {
+      height: 222px;
+      max-width: 330px;
     }
     &__title {
       line-height: 55px;
@@ -153,31 +168,36 @@
       margin-bottom: 15px;
 
       &--vanilla-img::before {
-        margin-bottom: 40px;
+        margin-bottom: 36px;
       }
       &--apple-img::before {
-        margin-bottom: 40px;
+        margin-bottom: 36px;
       }
       &--heart-img::before {
-        margin-bottom: 40px;
+        margin-bottom: 36px;
       }
     }
     &__text {
       @include font-type(bold, text-normal, medium, small);
+      max-width: 330px;
     }
   }
   .gallery {
+    background: linear-gradient(to bottom, #fff5f6 0 45%, #ffffff 0 100%);
     &__container {
+      padding: 0 20px 130px 20px;
       max-width: 1050px;
+      max-height: 430px;
     }
-
     &__img {
-      min-width: 1200px;
-      min-height: 400px;
+      min-width: 800px;
+      max-height: 1100px;
     }
     img {
-      min-width: 1000px;
-      height: 100%;
+      min-width: 800px;
+      max-width: 1000px;
+      min-height: 150px;
+      max-height: 400px;
     }
   }
 }
