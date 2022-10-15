@@ -1,5 +1,18 @@
 @use '../utils/forward' as *;
 
+.section {
+  width: 100vw;
+  margin: 0 auto;
+
+  &__container {
+    padding-inline: 20px;
+    min-width: 320px;
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
 .products {
   &__container {
     padding: 121px 20px 98px;
