@@ -1,6 +1,6 @@
 .footer {
   width: 100%;
-  background-color: #fff5f6;
+  background-color: color-get('bg-secondary');
   &__container {
     padding: 0 20px;
   }
@@ -11,7 +11,7 @@
     border-radius: 50%;
     display: flex;
     &:hover {
-      background-color: #d41443;
+      background-color: color-get('accent-primary');
     }
   }
   &__svg {
@@ -20,22 +20,24 @@
   &__use {
     fill: #ffffff;
     width: 100%;
+    stroke: none;
   }
   &__social {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 28px;
+    margin-top: 43px;
     justify-content: flex-end;
   }
   &__rights {
-    border-top: 1px solid #e1e1e1;
+    border-top: 1px solid color-get('brd-primary');
     width: 100%;
     font-family: 'DM Sans', sans-serif;
     padding-top: 22px;
     padding-bottom: 25px;
     margin: 0 auto;
-    color: #907e82;
+    color: color-get('text-secondary');
     font-weight: 700;
     display: flex;
     justify-content: center;
@@ -44,6 +46,7 @@
     text-align: center;
     & p {
       margin: 0 80px;
+      line-height: 1.52;
     }
   }
   &__contact {
@@ -54,30 +57,31 @@
     justify-content: flex-end;
     font-size: 12px;
     font-weight: 700;
+    line-height: 1.86;
   }
   &__header {
     display: flex;
     justify-items: flex-start;
     flex-direction: column;
-    gap: 17px;
     text-transform: uppercase;
     font-family: 'Titan One', sans-serif;
-    // font-weight: 400;
+    line-height: 1.145;
   }
   &__made {
     display: flex;
     flex-direction: column;
     font-size: 18px;
-    color: #ffa5ba;
+    color: color-get('accent-secondary');
   }
   &__passion {
     display: flex;
     flex-direction: column;
     font-size: 34px;
-    color: #d41443;
+    color: color-get('accent-primary');
+    letter-spacing: 0.04em;
   }
   &__phone {
-    color: #d41443;
+    color: color-get('accent-primary');
     text-decoration: none;
   }
 }
@@ -92,12 +96,20 @@
     }
     &__made {
       font-size: 26px;
+      letter-spacing: 0.04em;
     }
     &__passion {
       font-size: 48px;
+      letter-spacing: 0.06em;
     }
     &__contact {
       font-size: 14px;
+    }
+    &__social {
+      margin-top: 0;
+    }
+    &__rights {
+      margin-top: 91px;
     }
   }
 }
@@ -110,6 +122,7 @@
     }
     &__passion {
       flex-direction: row;
+      font-size: 58px;
     }
   }
 }
