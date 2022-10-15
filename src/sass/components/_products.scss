@@ -1,14 +1,7 @@
 @use '../utils/forward' as *;
 
 .products {
-  min-width: 320px;
-  max-width: 768px;
-  width: 100%;
-
   &__container {
-    min-width: 320px;
-    max-width: 1200px;
-    margin: 0 auto;
     padding: 121px 20px 98px;
   }
 
@@ -42,14 +35,9 @@
   }
 
   &__item {
-    max-width: 280px;
     margin: 0 auto;
     border-radius: 24px;
-    @include flex-basis(1, 1px);
-  }
-
-  &__item:not(:last-child) {
-    margin-bottom: 130px;
+    @include flex-basis(1, 130px);
   }
 
   &__item--1 {
@@ -146,14 +134,11 @@
     &__list {
       list-style: none;
       margin-top: 150px;
-      display: flex;
-      flex-direction: row;
-      gap: 20px;
+      @include flex-display(wrap, 20px);
     }
 
     &__item {
-      max-width: 220px;
-      margin: 0 auto;
+      @include flex-basis(3, 20px);
     }
   }
 }
@@ -167,6 +152,15 @@
       min-width: 1200px;
       margin: 0 auto;
       padding: 127px 112px 119px;
+    }
+
+    &__list {
+      margin-top: 259px;
+      @include flex-display(wrap, 30px);
+    }
+
+    &__item {
+      @include flex-basis(3, 30px);
     }
   }
 }
