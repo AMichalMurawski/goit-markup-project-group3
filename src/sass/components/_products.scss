@@ -2,11 +2,12 @@
 
 .products {
   min-width: 320px;
-  max-width: 1200px;
+  max-width: 768px;
   width: 100%;
 
   &__container {
-    max-width: 768px;
+    min-width: 320px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 121px 20px 98px;
   }
