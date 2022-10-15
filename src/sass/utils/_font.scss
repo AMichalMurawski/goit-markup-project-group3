@@ -178,7 +178,7 @@ $fontSpacing: (
         font-size: $sizeMin;
       } @else if $sizeMax != 0px {
         $font-size: calc(
-          $sizeMin + (($sizeMax - $sizeMin) / 1px) * ((100vw - $mediaMin) / (($mediaMax - $mediaMin) / 1px))
+          #{$sizeMin} + #{($sizeMax - $sizeMin) / 1px} * ((100vw - #{$mediaMin}) / #{($mediaMax - $mediaMin) / 1px})
         );
         font-size: $font-size;
       } @else {

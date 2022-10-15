@@ -3,22 +3,23 @@
 .about {
   position: relative;
   background-color: color-get('bg-secondary');
-  // padding-bottom: 100px; //do usunięcia
+
+  &__container {
+    position: relative;
+    padding-top: 125px;
+    @include flex-display(column, null, null, start);
+  }
 
   &__background-image {
     position: absolute;
     bottom: 61px;
+    left: 0;
     background-image: url('../images/about-bg.png');
     background-size: 100%;
     background-position: bottom;
     background-repeat: no-repeat;
     width: 100%;
     height: 100%;
-  }
-
-  &__container {
-    position: relative;
-    @include flex-display(column, null, null, start);
   }
 
   &__title {
@@ -31,16 +32,17 @@
 
   &__label {
     margin-bottom: 15px;
-    @include font-type(null, 18px, 1.17);
+    @include font-type(null, 18px, 1.147);
     color: color-get('accent-secondary');
   }
 
   &__header {
-    @include font-type(null, 34px, 1.15);
+    @include font-type(null, 34px, 1.147, 0.06em);
     color: color-get('accent-primary');
   }
 
   &__main {
+    position: relative;
     @include flex-display(column, null, null, center);
   }
 }
@@ -49,7 +51,7 @@
   padding: 50px 30px 0;
 
   &__info {
-    @include font-type(500, 12px, 1.62, 0.01em);
+    @include font-type(500, 12px, 1.76, 0.04em);
 
     &--color {
       color: color-get('text-secondary');
@@ -65,10 +67,28 @@
   }
 }
 
+@include media-mapp('phone', 'tablet') {
+  .about {
+    &__label {
+      @include font-fulltype(null, 18px, null, null, 480px, 768px, 26px);
+    }
+
+    &__header {
+      @include font-fulltype(null, 34px, null, null, 480px, 768px, 48px);
+    }
+  }
+
+  .description {
+    &__info {
+      @include font-fulltype(null, 12px, null, null, 480px, 768px, 14px);
+    }
+  }
+}
+
 @include media-mapp('tablet') {
   .about {
     &__container {
-      padding: 130px 0 27px;
+      padding-bottom: 27px;
     }
 
     &__background-image {
@@ -80,13 +100,11 @@
     }
 
     &__label {
-      @include font-type(null, 26px, 1.145);
-      color: color-get('accent-secondary');
+      @include font-fulltype(null, 26px, null, null, 768px, 1200px, 30px);
     }
 
     &__header {
-      @include font-type(null, 48px, 1.145);
-      color: color-get('accent-primary');
+      @include font-fulltype(null, 48px, null, null, 768px, 1200px, 58px);
     }
 
     &__main {
@@ -107,7 +125,7 @@
     padding: 50px 0 0;
 
     &__info {
-      @include font-type(null, 14px, 1.76, 0.01em);
+      @include font-fulltype(null, 14px, null, null, 768px, 1200px, 16px);
     }
 
     &__btn {
@@ -119,12 +137,44 @@
 @include media-mapp('desktop') {
   .about {
     &__container {
-      padding: 125px 0 0;
+      padding-top: 125px;
+      padding-bottom: 0;
     }
 
     &__background-image {
       display: block;
-      bottom: 26px;
+      bottom: -65px;
+    }
+
+    &__title {
+      margin-bottom: 102px;
+    }
+
+    &__label {
+      @include font-type(null, 30px);
+    }
+
+    &__header {
+      @include font-type(null, 58px);
+    }
+
+    &__main {
+      flex-direction: unset;
+      @include flex-display(wrap, 71px, center);
+    }
+
+    &__bio-eco {
+      max-width: 516px;
+    }
+
+    &__description {
+      flex: 1;
+    }
+  }
+
+  .description {
+    &__info {
+      @include font-type(null, 16px);
     }
   }
 }
