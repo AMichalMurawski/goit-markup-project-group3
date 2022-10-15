@@ -13,12 +13,15 @@
   left: 0;
   top: 0;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   z-index: 12;
+  display: flex;
+  // justify-content: center;
+  // align-items: center;
 
   &__container {
-    margin: 0 ;
-    padding: 40px 10px 80px;
+    margin: 0;
+    padding: 40px 5px 80px;
     position: relative;
     left: 50%;
     top: 50%;
@@ -26,6 +29,7 @@
     min-width: 320px;
     max-width: 480px;
     width: 100%;
+    height: 500px;
     background-color: color-get('bg-mobile');
     display: flex;
     justify-content: center;
@@ -50,7 +54,7 @@
   &__text {
     font-family: 'DM Sans';
     font-weight: 700;
-    font-size: 20px;
+    font-size: 15px;
     line-height: 1.28;
     color: color-get('text-alternative');
     text-align: center;
