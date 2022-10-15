@@ -1,26 +1,44 @@
 @use '../utils/forward' as *;
 
 .section {
-  width: 100%;
-  min-width: 320px;
-  max-width: 1200px;
+  width: 100vw;
   margin: 0 auto;
 
   &__container {
-    padding: 125px 20px 0;
-    max-width: 440px;
+    padding-inline: 20px;
+    min-width: 320px;
+    max-width: 1280px;
+    width: 100%;
     margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  .section__container {
+    padding-inline: calc(20px + 144 * ((100vw - 480px) / 288));
   }
 }
 
 @include media-mapp('tablet') {
   .section__container {
-    max-width: 700px;
+    padding-inline: calc(35px + 40 * ((100vw - 768px) / 432));
   }
 }
 
-@include media-mapp('desktop') {
+// @include media-mapp('desktop') {
+//   .section__container {
+//     padding-inline: 115px;
+//   }
+// }
+
+@media screen and (min-width: 1200px) and (max-width: 1280px) {
   .section__container {
-    max-width: 1050px;
+    padding-inline: calc(75px + 40 * ((100vw - 1200px) / 80));
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .section__container {
+    padding-inline: 115px;
   }
 }
