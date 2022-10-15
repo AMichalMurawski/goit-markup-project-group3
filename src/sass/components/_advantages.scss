@@ -2,201 +2,297 @@
 
 .advantages {
   background: color-get('bg-secondary');
+
   &__container {
     @include flex-display(column, null, center, null);
+
     padding: 39px 20px 97px 20px;
+
     max-width: 440px;
+
     margin: 0 auto;
   }
+
   &__header {
     display: none;
   }
+
   &__list {
     @include flex-display(column, 38px, center, start);
+
     min-height: 570px;
   }
+
   &__item {
     max-width: 230px;
+
     height: 156px;
+
     position: relative;
   }
+
   &__title {
     font-family: 'Titan One';
+
     line-height: 41px;
+
     text-transform: uppercase;
+
     @include font-type(normal, header-medium, little, medium);
+
     color: color-get('accent-primary');
+
     margin-bottom: 19px;
+
     display: block;
 
     &--vanilla-img::before {
       margin-bottom: 19px;
+
       content: url('../images/vanilla-icecream.png');
+
       width: 50px;
+
       height: 50px;
+
       display: block;
     }
+
     &--apple-img::before {
       margin-bottom: 19px;
+
       content: url('../images/apple-icecream.png');
+
       width: 50px;
+
       height: 50px;
+
       display: block;
     }
+
     &--heart-img::before {
       margin-bottom: 19px;
+
       content: url('../images/heart-icecream.png');
+
       width: 50px;
+
       height: 50px;
+
       display: block;
     }
   }
+
   &__text {
     font-family: 'DM Sans';
+
     @include font-type(bold, text-little, medium, small);
+
     max-width: 230px;
   }
 }
+
 .gallery {
-  min-width: 320px;
-  max-width: 1200px;
-  width: 100%;
-  margin: 0 auto;
   background: linear-gradient(to bottom, #fff5f6 0 45%, #ffffff 0 100%);
 
   &__container {
-    display: flex;
-    padding-left: 20px;
-    padding-right: 20px;
-    max-width: 440px;
     margin: 0 auto;
   }
+
   &__title {
     display: none;
   }
+
   &__img {
-    min-width: 320px;
-    max-height: 130px;
+    min-width: auto;
+
+    max-width: 760px;
+
+    width: 100%;
+
+    max-height: 150px;
 
     & > img {
       margin: auto;
+
       display: block;
+
       height: 100%;
+
       width: 100%;
+
       object-fit: fill;
     }
   }
+
   img {
-    min-width: 330px;
-    max-width: 500px;
+    min-width: 290px;
+
+    max-width: 767px;
+
     min-height: 122px;
+
     max-height: 150px;
   }
 }
+
 @media screen and (min-width: 768px) {
   .advantages {
     &__container {
       padding: 66px 20px 140px 20px;
+
       max-width: 700px;
     }
+
     &__list {
       flex-direction: row;
+
       gap: 60px;
+
       min-height: 200px;
     }
+
     &__item {
       height: 226px;
+
       max-width: 190px;
     }
+
     &__title {
       line-height: 55px;
+
       @include font-type(normal, header-height, little, medium);
+
       margin-bottom: 16px;
 
       &--vanilla-img::before {
         margin-bottom: 16px;
       }
+
       &--apple-img::before {
         margin-bottom: 16px;
       }
+
       &--heart-img::before {
         margin-bottom: 16px;
       }
     }
+
     &__text {
       @include font-type(bold, text-small, medium, null);
+
       max-width: 180px;
     }
   }
+
   .gallery {
-    background: linear-gradient(to bottom, #fff5f6 0 55%, #ffffff 0 100%);
+    background: linear-gradient(to bottom, #fff5f6 0 36%, #ffffff 0 100%);
+
     &__container {
       padding: 0 20px 130px 20px;
+
       max-width: 700px;
+
       max-height: 300px;
     }
+
     &__img {
+      margin: auto;
+
       min-width: 500px;
+
       max-height: 200px;
     }
+
     img {
-      min-width: 400px;
-      max-width: 800px;
+      min-width: 767px;
+
+      max-width: 1000px;
+
       min-height: 150px;
+
       max-height: 250px;
     }
   }
 }
+
 @media screen and (min-width: 1200px) {
   .advantages {
     &__container {
       padding: 139px 20px 140px 20px;
+
       max-width: 1050px;
     }
+
     &__list {
       flex-direction: row;
+
+      align-items: center;
+
       gap: 30px;
+
       min-height: 222px;
     }
+
     &__item {
       height: 222px;
+
       max-width: 330px;
     }
+
     &__title {
       line-height: 55px;
+
       @include font-type(normal, header-large, little, medium);
+
       margin-bottom: 15px;
 
       &--vanilla-img::before {
         margin-bottom: 36px;
       }
+
       &--apple-img::before {
         margin-bottom: 36px;
       }
+
       &--heart-img::before {
         margin-bottom: 36px;
       }
     }
+
     &__text {
       @include font-type(bold, text-normal, medium, small);
+
       max-width: 330px;
     }
   }
+
   .gallery {
-    background: linear-gradient(to bottom, #fff5f6 0 45%, #ffffff 0 100%);
+    background: linear-gradient(to bottom, #fff5f6 0 28%, #ffffff 0 100%);
+
     &__container {
       padding: 0 20px 130px 20px;
-      max-width: 1050px;
+
+      max-width: 1280px;
+
       max-height: 430px;
     }
+
     &__img {
-      min-width: 800px;
-      max-height: 1100px;
+      min-width: 1000px;
+
+      max-width: 1500px;
+
+      max-height: 400px;
     }
+
     img {
-      min-width: 800px;
-      max-width: 1000px;
+      max-width: 1500x;
+
+      min-height: 1000px;
+
       min-height: 150px;
+
       max-height: 400px;
     }
   }
