@@ -1,9 +1,4 @@
 @use '../utils/forward' as *;
-@use '../utils/mixins' as *;
-@use '../utils/colors' as *;
-@use '../utils/font' as *;
-
-// poniżej piszemy kod scss
 
 .table {
   display: block;
@@ -17,7 +12,7 @@
     height: 572px;
     border-radius: 24px;
     background-color: white;
-    box-shadow: map-get($colors, shdw-products);
+    box-shadow: color-get('shdw-products');
     z-index: 3;
   }
   &__list {
@@ -27,10 +22,10 @@
   }
   &__head {
     max-width: 330px;
-    @include head_font;
+    @include mix-head_font;
     line-height: 29.76px;
     border-radius: 6px;
-    background-color: map-get($colors, second-chld);
+    background-color: color-get('second-chld');
     height: 28px;
     width: 73px;
     margin-bottom: 32px;
@@ -38,48 +33,48 @@
     margin-top: 52px;
 
     &--second {
-      @include head_font;
+      @include mix-head_font;
       width: 138px;
-      background-color: map-get($colors, third-chld);
+      background-color: color-get('third-chld');
       color: white;
     }
   }
   &__place {
-    @include head_font;
+    @include mix-head_font;
     margin-bottom: 10px;
     line-height: 29.76px;
   }
   &__content {
-    @include head_font;
+    @include mix-head_font;
     max-width: 243px;
-    color: map-get($colors, text-secondary);
+    color: color-get('text-secondary');
     line-height: 29.28px;
   }
   &__opened {
     margin-bottom: 15px;
-    @include head_font;
+    @include mix-head_font;
   }
   &__contact {
-    @include head_font;
+    @include mix-head_font;
     line-height: 29.76px;
 
     & a {
       text-decoration: none;
-      color: map-get($colors, text-secondary);
+      color: color-get('text-secondary');
     }
   }
   &__hour {
-    color: map-get($colors, accent-secondary);
+    color: color-get('accent-secondary');
     line-height: 29.76px;
   }
   &__button {
     margin: 86px 7.5px 186px 7.5px;
     background-color: white;
-    color: map-get($colors, btn-bg);
+    color: color-get('btn-bg');
   }
   &__button:hover,
   &__button:active {
-    background-color: map-get($colors, btn-bg);
+    background-color: color-get('btn-bg');
     color: white;
   }
 
@@ -93,10 +88,10 @@
   width: 234px;
   border-bottom: 1px solid grey;
   margin: 32px 0;
-  border-color: map-get($colors, brd-primary);
+  border-color: color-get('brd-primary');
 }
 .background {
-  background-image: url(/goit-markup-project-group3/src/images/sectionbg1.png);
+  background-image: url(../images/sectionbg1.png);
   width: 100%;
   height: 382px;
   position: absolute;
