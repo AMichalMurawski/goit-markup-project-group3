@@ -1,0 +1,175 @@
+@use '../utils/forward' as *;
+
+.advantage {
+  background: color-get('bg-secondary');
+  padding-top: 30px;
+  padding-bottom: 97px;
+
+  &__container {
+    @include flex-display(column, null, center, null);
+  }
+
+  &__header {
+    display: none;
+  }
+
+  &__list {
+    @include flex-display(column, 38px, center, start);
+    min-height: 570px;
+  }
+
+  &__item {
+    max-width: 230px;
+    height: 156px;
+  }
+
+  &__title {
+    font-family: 'Titan One';
+    line-height: 41px;
+    text-transform: uppercase;
+    @include font-type(normal, header-medium, little, medium);
+    color: color-get('accent-primary');
+    margin-bottom: 19px;
+    display: block;
+
+    &--vanilla-img::before {
+      margin-bottom: 19px;
+      content: url('../images/vanilla-icecream.png');
+      width: 50px;
+      height: 50px;
+      display: block;
+    }
+
+    &--apple-img::before {
+      margin-bottom: 19px;
+      content: url('../images/apple-icecream.png');
+      width: 50px;
+      height: 50px;
+      display: block;
+    }
+
+    &--heart-img::before {
+      margin-bottom: 19px;
+      content: url('../images/heart-icecream.png');
+      width: 50px;
+      height: 50px;
+      display: block;
+    }
+  }
+
+  &__text {
+    font-family: 'DM Sans';
+    @include font-type(bold, text-little, medium, small);
+    max-width: 230px;
+  }
+
+  @media screen and (min-width: 768px) {
+    & {
+      padding-bottom: 140px;
+      padding-top: 60px;
+      &__list {
+        @include flex-display(row, 60px, center, start);
+        min-height: 250px;
+      }
+
+      &__item {
+        max-width: 230px;
+        height: 156px;
+      }
+
+      &__title {
+        @include font-type(normal, header-height, little, medium);
+        line-height: 55px;
+        margin-bottom: 13px;
+
+        &--vanilla-img::before {
+          margin-bottom: 36px;
+        }
+
+        &--apple-img::before {
+          margin-bottom: 36px;
+        }
+
+        &--heart-img::before {
+          margin-bottom: 36px;
+        }
+      }
+
+      &__text {
+        @include font-type(bold, text-small, medium, small);
+        max-width: 180px;
+      }
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    & {
+      padding-top: 30px;
+      &__container {
+        @include flex-display(column, null, center, null);
+      }
+
+      &__list {
+        @include flex-display(row, 100px, center, center);
+      }
+
+      &__item {
+        max-width: 300px;
+        height: 156px;
+      }
+
+      &__title {
+        @include font-type(normal, header-large, little, medium);
+        line-height: 66px;
+        margin-bottom: 15px;
+
+        &--vanilla-img::before {
+          margin-bottom: 36px;
+        }
+
+        &--apple-img::before {
+          margin-bottom: 36px;
+        }
+
+        &--heart-img::before {
+          margin-bottom: 36px;
+        }
+      }
+
+      &__text {
+        @include font-type(bold, text-normal, medium, small);
+        max-width: 300px;
+      }
+    }
+  }
+}
+
+.mansory {
+  background: linear-gradient(to bottom, #fff5f6 0 40%, #ffffff 0 100%);
+  height: max-content;
+  width: 100%;
+}
+.mansory__container {
+  max-width: 1200px;
+  max-height: max-content;
+  margin: auto;
+  padding: 0 20px;
+  @media screen and (min-width: 768px) {
+    & {
+      padding: 0 70px;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    & {
+      padding: 0 110px;
+    }
+  }
+}
+.mansory__title {
+  display: none;
+}
+.mansory__thumb {
+  width: 100%;
+}
+.mansory__photo {
+  object-fit: cover;
+}
