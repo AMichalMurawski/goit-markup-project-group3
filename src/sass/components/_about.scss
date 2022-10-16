@@ -154,6 +154,10 @@
       @include flex-basis(2, 20px);
     }
 
+    &__made-by {
+      @include font-type(null, 10px);
+    }
+
     &__description {
       @include flex-basis(2, 20px);
     }
@@ -203,6 +207,10 @@
 
     &__bio-eco {
       max-width: 516px;
+    }
+
+    &__made-by {
+      @include font-type(null, 12px);
     }
 
     &__description {
