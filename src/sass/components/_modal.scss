@@ -42,11 +42,11 @@
     }
   }
   &__title {
-    // font-weight: 200px;
-    // font-size: 20px;
-    // line-height: 1.2;
-    // letter-spacing: 4px;
-    @include font-type(200px, 20px, 1.5, 4px);
+    font-weight: 200px;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 4px;
+    // @include font-type(200px, 20px, 1.5, 4px);
 
     text-align: center;
     display: block;
@@ -118,10 +118,10 @@
   }
   &__text {
     font-family: 'DM Sans';
-    // font-weight: 700px;
-    // font-size: 15px;
-    // line-height: 1.28;
-    @include font-type(700px, 15px, 1.28, null);
+    font-weight: 700px;
+    font-size: 15px;
+    line-height: 1.28;
+    // @include font-type(700px, 15px, 1.28, null);
 
     color: color-get('text-alternative');
     text-align: center;
