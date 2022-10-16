@@ -30,6 +30,7 @@ $transition: (
   'transform': transform $transitionProperty,
   'opacity': opacity $transitionProperty,
   'visibility': visibility $transitionProperty,
+  'flex-basis': visibility $transitionProperty,
 );
 
 $transitionCheck: (
@@ -40,7 +41,8 @@ $transitionCheck: (
   'box-shadow',
   'transform',
   'opacity',
-  'visibility'
+  'visibility',
+  'flex-basis',
 );
 
 @function getOneTransition($var) {

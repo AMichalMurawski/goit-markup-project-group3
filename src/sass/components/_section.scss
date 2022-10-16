@@ -1,12 +1,12 @@
 @use '../utils/forward' as *;
 
 .section {
-  width: 100vw;
+  width: calc(100vw - (100vw - 100%));
   margin: 0 auto;
 
   &__container {
     padding-inline: 20px;
-    min-width: 320px;
+    min-width: calc(320px - (100vw - 100%));
     max-width: 1280px;
     width: 100%;
     margin: 0 auto;
@@ -19,17 +19,11 @@
   }
 }
 
-@include media-mapp('tablet') {
+@include media-mapp('tablet', 'desktop') {
   .section__container {
-    padding-inline: calc(35px + 40 * ((100vw - 768px) / 432));
+    padding-inline: calc(35px + 40 * ((100vw - 900px) / 300));
   }
 }
-
-// @include media-mapp('desktop') {
-//   .section__container {
-//     padding-inline: 115px;
-//   }
-// }
 
 @media screen and (min-width: 1200px) and (max-width: 1280px) {
   .section__container {
