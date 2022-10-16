@@ -67,8 +67,11 @@
     & {
       padding-bottom: 140px;
       padding-top: 60px;
+      &__container {
+        @include flex-display(column, null, center, start);
+      }
       &__list {
-        @include flex-display(row, 60px, center, start);
+        @include flex-display(row, 100px, center, start);
         min-height: 250px;
       }
 
