@@ -121,26 +121,26 @@
     background-color: color-get('text-alternative');
   }
 
-  // &__icons {
-  //   width: 24px;
-  //   height: 24px;
-  //   fill: color-get('accent-primary');
-  //   @include transition-add('fill');
-  //   &:focus,
-  //   &:hover {
-  //     fill: color-get('shdw-dots');
-  //   }
-  // }
-  //   &:focus,
-  // &:hover {
-  //   background-color: color-get('accent-primary');
-  // }
+  &__icons {
+    width: 24px;
+    height: 24px;
+    fill: color-get('accent-primary');
+    @include transition-add('fill');
+    &:focus,
+    &:hover {
+      fill: color-get('shdw-dots');
+    }
+  }
+    &:focus,
+  &:hover {
+    background-color: color-get('accent-primary');
+  }
 
-  //   &__icon-arrow {
-  //     fill: color-get('text-alternative');
-  //     width: 40px;
-  //   height: 40px;
-  //   }
+    &__icon-arrow {
+      fill: color-get('text-alternative');
+      width: 40px;
+    height: 40px;
+    }
   
 }
 
