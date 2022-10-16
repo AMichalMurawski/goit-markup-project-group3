@@ -31,9 +31,10 @@
         </nav>
         <div class="header__block--top-right">
           <button
-            class="header__mobile mobile__toggle js-open-menu"
+            class="header__mobile"
             aria-expanded="false"
             aria-controls="mobile-menu"
+            js-open-menu
           >
             <svg class="header__icons">
               <use xlink:href="./images/icons2.svg#burger" width="24" height="24"></use>
@@ -104,7 +105,11 @@
           </article>
         </div>
         <div class="header__slider--girl">
+          <div class="header__easter">
+            <p>This header<br />has been made<br />by<br />Rafał G. "Hunter"</p>
+          </div>
           <img
+            class="header__slider--overlay"
             loading="lazy"
             src="./images/header_slider-girl.png"
             srcset="./images/header_slider-girl@2x.png 2x, ./images/header_slider-girl@3x.png 3x"
