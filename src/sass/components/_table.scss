@@ -5,6 +5,11 @@
   background-color: rgb(255, 245, 246, 80%);
   justify-items: center;
   z-index: -2;
+
+  &__header {
+    display: none;
+  }
+
   &__box {
     // border: 1px solid black;
     padding-left: 43px;
