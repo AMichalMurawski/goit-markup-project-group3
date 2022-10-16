@@ -2,7 +2,7 @@
 
 .header {
   background-color: color-get('bg-alternative');
-  
+
   &__container {
     position: relative;
     @include flex-display(column, null, space-between);
@@ -273,6 +273,14 @@
       width: 8px;
       height: 8px;
     }
+    &__easter {
+      position: absolute;
+      bottom: 20px;
+      left: 80px;
+      font-family: DM Sans;
+      @include font-type(400, 8px, 1.5, null);
+      color: get('accent-primary');
+    }
     &__slider {
       &--main {
         width: 143px;
@@ -286,11 +294,21 @@
         height: 133px;
         display: flex;
         margin-left: 30;
+        overflow: hidden;
         // border: 1px solid teal;
-        img {
-          position: absolute;
+        &:hover {
+          .header__slider--overlay {
+            display: block;
+            transform: translateY(100%);
+          }
         }
       }
+      &--overlay {
+        position: absolute;
+        transform: translateY(0);
+        transition-duration: 1s;
+      }
+
       &--milk {
         position: relative;
         display: flex;
@@ -402,6 +420,12 @@
     &__icon-arrow {
       width: 12px;
       height: 12px;
+    }
+    &__easter {
+      bottom: 40px;
+      left: 130px;
+      @include font-type(400, 10px, 1.4, null);
+      color: get('text-alternative');
     }
     &__slider {
       &--main {
