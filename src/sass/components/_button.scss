@@ -10,6 +10,7 @@
   @include transition-add('background-color');
   cursor: pointer;
 
+
   &__alternative {
     @include font-type(400, 8px, 1.3);
     height: 24px;

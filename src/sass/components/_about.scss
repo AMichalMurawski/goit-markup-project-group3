@@ -114,10 +114,12 @@
 
     &__bio-eco {
       @include flex-basis(2, 20px);
+      @include transition__add('flex-basis');
     }
 
     &__description {
       @include flex-basis(2, 20px);
+      @include transition__add('flex-basis');
     }
   }
 
