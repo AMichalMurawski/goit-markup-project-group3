@@ -21,7 +21,7 @@
     width: 100%;
     height: 100vh;
 
-    &--desktop{
+    &--desktop {
       display: none;
     }
   }
@@ -48,6 +48,40 @@
   &__main {
     position: relative;
     @include flex-display(column, null, null, center);
+  }
+
+  &__bio-eco {
+    position: relative;
+
+    & > img {
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  &__made-by {
+    position: absolute;
+    @include font-type(null, 8px);
+    color: black;
+    bottom: 40%;
+    right: 30%;
+    z-index: 0;
+
+    .about__bio-eco:hover & {
+      animation: madeBySlide 1s linear forwards;
+    }
+  }
+}
+
+@keyframes madeBySlide {
+  0% {
+    transform: rotate(60deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+    bottom: 10%;
+    right: 5%;
   }
 }
 
