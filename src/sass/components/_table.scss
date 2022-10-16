@@ -1,10 +1,104 @@
 @use '../utils/forward' as *;
 
-// poniżej piszemy kod scss
-
 .table {
-  border: 1px solid black;
-  &__head {
-    color: red;
+  display: block;
+  background-color: rgb(255, 245, 246, 80%);
+  justify-items: center;
+  z-index: -2;
+  &__box {
+    // border: 1px solid black;
+    padding-left: 43px;
+    padding-right: 44px;
+    height: 572px;
+    border-radius: 24px;
+    background-color: white;
+    box-shadow: color-get('shdw-products');
+    z-index: 3;
   }
+  &__list {
+    column-gap: 31px;
+    display: flex;
+    justify-content: center;
+  }
+  &__head {
+    max-width: 330px;
+    @include mix-head_font;
+    line-height: 29.76px;
+    border-radius: 6px;
+    background-color: color-get('second-chld');
+    height: 28px;
+    width: 73px;
+    margin-bottom: 32px;
+    text-align: center;
+    margin-top: 52px;
+
+    &--second {
+      @include mix-head_font;
+      width: 138px;
+      background-color: color-get('third-chld');
+      color: white;
+    }
+  }
+  &__place {
+    @include mix-head_font;
+    margin-bottom: 10px;
+    line-height: 29.76px;
+  }
+  &__content {
+    @include mix-head_font;
+    max-width: 243px;
+    color: color-get('text-secondary');
+    line-height: 29.28px;
+  }
+  &__opened {
+    margin-bottom: 15px;
+    @include mix-head_font;
+  }
+  &__contact {
+    @include mix-head_font;
+    line-height: 29.76px;
+
+    & a {
+      text-decoration: none;
+      color: color-get('text-secondary');
+    }
+  }
+  &__hour {
+    color: color-get('accent-secondary');
+    line-height: 29.76px;
+  }
+  &__button {
+    margin: 86px 7.5px 186px 7.5px;
+    background-color: white;
+    color: color-get('btn-bg');
+  }
+  &__button:hover,
+  &__button:active {
+    background-color: color-get('btn-bg');
+    color: white;
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.line {
+  width: 234px;
+  border-bottom: 1px solid grey;
+  margin: 32px 0;
+  border-color: color-get('brd-primary');
+}
+.background {
+  background-image: url(../images/sectionbg1.png);
+  width: 100%;
+  height: 382px;
+  position: absolute;
+  top: 131px;
+  z-index: 0;
+
+  // z-index: -1;
+  justify-items: center;
+  background-repeat: no-repeat;
 }
