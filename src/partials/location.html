@@ -4,13 +4,13 @@
   <div class="modal__container">
     <h2 class="modal__title">find us <span class="modal__title--accent">here!</span></h2>
     <div>
-      <ul class="modal__button-list">
-        <li><button class="btn btn__primary">Hogsmeade, FL</button></li>
-        <li><button class="btn btn__primary">Chicago, IL</button></li>
-        <li><button class="btn btn__primary">New York, NY</button></li>
+      <ul class="modal__button-list" data-locationBtns>
+        <li><button class="btn btn__primary" data-locbtnindex="0">Hogsmeade, FL</button></li>
+        <li><button class="btn btn__primary" data-locbtnindex="1">Chicago, IL</button></li>
+        <li><button class="btn btn__primary" data-locbtnindex="2">New York, NY</button></li>
       </ul>
     </div>
-    <div class="modal__location">
+    <div class="modal__location" data-local-div-1>
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5567.395554123479!2d-81.47280894411524!3d28.472334616873493!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e77f1fb519803d%3A0x5f50ac613af9cd7!2sThe%20Wizarding%20World%20of%20Harry%20Potter%20-%20Hogsmeade!5e0!3m2!1spl!2spl!4v1665853733625!5m2!1spl!2spl"
         width="100%"
@@ -21,8 +21,30 @@
         referrerpolicy="no-referrer-when-downgrade"
       ></iframe>
     </div>
+    <div class="modal__location" data-local-div-2>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11880.180948908594!2d-87.62905699973697!3d41.89188420185722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd3541290b235%3A0x7314937a7703eb74!2s360%20CHICAGO!5e0!3m2!1spl!2spl!4v1665923457711!5m2!1spl!2spl"
+        width="100%"
+        height="100%"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+    <div class="modal__location" data-local-div-3>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.4227300772923!2d-73.97722939999998!3d40.75272619999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x37513b7f1821408b!2sGrand%20Central%20Terminal!5e0!3m2!1spl!2spl!4v1665923076025!5m2!1spl!2spl"
+        width="100%"
+        height="100%"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
     <div>
-      <button type="button" class="btn btn__secondary modal__btn" data-modal-close-2>Close</button>
-    </di>
+      <button type="button" class="btn btn__secondary" data-modal-close-2>Close</button>
+    </div>
   </div>
 </div>
