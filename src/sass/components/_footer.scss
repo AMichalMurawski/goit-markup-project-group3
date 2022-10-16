@@ -1,5 +1,5 @@
+@use '../utils/forward' as *;
 .footer {
-  width: 100%;
   background-color: color-get('bg-secondary');
   &__container {
     padding: 0 20px;
@@ -93,6 +93,8 @@
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: space-around;
+      width: 100%;
+      max-width: 1280px;
     }
     &__made {
       font-size: 26px;
@@ -116,6 +118,10 @@
 
 @media screen and (min-width: 1200px) {
   .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
     &__made {
       flex-direction: row;
       font-size: 30px;
