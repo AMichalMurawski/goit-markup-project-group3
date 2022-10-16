@@ -1,14 +1,54 @@
+//modal podstawowy
+// (() => {
+//   const refs = {
+//     openModalBtn: document.querySelector('[data-modal-open-1]'),
+//     closeModalBtn: document.querySelector('[data-modal-close-1]'),
+//     modal: document.querySelector('[data-modal-1]'),
+//   };
+
+//   refs.openModalBtn.addEventListener('click', toggleModal);
+//   refs.closeModalBtn.addEventListener('click', toggleModal);
+
+//   function toggleModal() {
+//     refs.modal.classList.toggle('is-hidden');
+//   }
+// })();
+
+
+//modal od Grzegorza
 (() => {
-    const refs = {
-      openModalBtn: document.querySelector("[data-modal-open]"),
-      closeModalBtn: document.querySelector("[data-modal-close]"),
-      modal: document.querySelector("[data-modal]"),
-    };
+  const modals = [
+  { openModalBtn: document.querySelector('[data-modal-open-1]'),
+    closeModalBtn: document.querySelector('[data-modal-close-1]'),
+    modal: document.querySelector('[data-modal-1]')
+  },
+  { openModalBtn: document.querySelector('[data-modal-open-2]'),
+    closeModalBtn: document.querySelector('[data-modal-close-2]'),
+    modal: document.querySelector('[data-modal-2]'),
+  }
+  ];
+  modals[0].openModalBtn.addEventListener('click', ()=>modals[0].modal.classList.toggle('is-hidden') );
+  modals[0].closeModalBtn.addEventListener('click', ()=>modals[0].modal.classList.toggle('is-hidden'));
+  modals[1].openModalBtn.addEventListener('click', ()=>modals[1].modal.classList.toggle('is-hidden') );
+  modals[1].closeModalBtn.addEventListener('click', ()=>modals[1].modal.classList.toggle('is-hidden'));
+   
+  //For second div with google maps
+  localDivs = [
+    div1 = document.querySelector("[data-local-div-1]"),
+    div2 = document.querySelector("[data-local-div-2]"),
+    div3 = document.querySelector("[data-local-div-3]"),
+  ]
+  const locationBtns = document.querySelector("[data-locationBtns]");
+  let actualDiv = 0;
   
-    refs.openModalBtn.addEventListener("click", toggleModal);
-    refs.closeModalBtn.addEventListener("click", toggleModal);
+  localDivs[actualDiv].classList.add('modal-visable');
+  locationBtns.addEventListener("click", (e) => {
+      
+      if (e.target.nodeName === "BUTTON") {
+        localDivs[actualDiv].classList.remove('modal-visable');
+        actualDiv=Number(e.target.dataset.locbtnindex);
+        localDivs[actualDiv].classList.add('modal-visable');
+      }   
+  });
   
-    function toggleModal() {
-      refs.modal.classList.toggle("is-hidden");
-    }
-  })();
+})();
