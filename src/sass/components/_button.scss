@@ -7,8 +7,8 @@
   padding-inline: 37px;
   border-radius: 22px;
   border: none;
-  @include transition-add('background-color');
-  @include transition-add('box-shadow');
+  @include transition-add('background-color' 'box-shadow');
+  //@include transition-add('box-shadow');
   cursor: pointer;
 
   &__alternative {
