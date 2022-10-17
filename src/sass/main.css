@@ -785,17 +785,17 @@ a {
   .products__name--1::before {
     content: url(../images/products-icecream-desktop.png);
     position: absolute;
-    transform: translate(-23%, -108%);
+    transform: translate(-22%, -108%);
   }
   .products__name--2::before {
     content: url(../images/products-coffee-desktop.png);
     position: absolute;
-    transform: translate(-23%, -108%);
+    transform: translate(-22%, -108%);
   }
   .products__name--3::before {
     content: url(../images/products-milkshake-desktop.png);
     position: absolute;
-    transform: translate(2%, -108%);
+    transform: translate(-18%, -105%);
   }
   .products__name::after {
     content: url(../images/dots.png);
