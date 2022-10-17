@@ -672,14 +672,16 @@ svg {
   background-color: #FFFFFF;
   transform: translate(330%, -170%);
 }
+.products__button:focus, .products__button:hover {
+  background-color: #D41443;
+}
 .products__icons {
-  width: 24px;
-  height: 24px;
+  padding: 7px;
   fill: #D41443;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .products__icons:focus, .products__icons:hover {
-  fill: #C7133E;
+  fill: #FFFFFF;
 }
 
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
