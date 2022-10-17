@@ -4,7 +4,7 @@
 .table {
   display: block;
   background: rgb(255, 255, 255);
-  background: linear-gradient(180deg, rgba(255, 255, 255, 1) 20%, rgba(255, 245, 246, 1) 29%);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 1) 11%, rgba(255, 245, 246, 1) 12%);
   justify-items: center;
   z-index: -2;
 
@@ -19,7 +19,7 @@
     border-radius: 24px;
     background-color: white;
     z-index: 3;
-    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, 0.2);
+    box-shadow: 0px 8px 30px 0px rgba(212, 20, 67, 0.1);
   }
   &__list {
     column-gap: 31px;
@@ -75,18 +75,45 @@
   }
   &__button {
     margin: 86px 7.5px 186px 7.5px;
-    background-color: white;
-    color: color-get('btn-bg');
+    // background-color: white;
+
+    &--primary {
+      background-color: color-get('btn-bg');
+      color: white;
+    }
+    &--secondary {
+      background-color: white;
+      color: color-get('btn-bg');
+    }
   }
-  &__button:hover,
-  &__button:active {
-    background-color: color-get('btn-bg');
-    color: white;
+  &__button--primary:hover,
+  &__button-primary:active {
+    -webkit-box-shadow: 0px 0px 88px -14px rgba(212, 19, 66, 1);
+    -moz-box-shadow: 0px 0px 88px -14px rgba(212, 19, 66, 1);
+    box-shadow: 0px 0px 88px -14px rgba(212, 19, 66, 1);
+  }
+  &__button--secondary:hover,
+  &__button--secondary:active {
+    -webkit-box-shadow: 0px 0px 88px -14px rgba(212, 19, 66, 1);
+    -moz-box-shadow: 0px 0px 88px -14px rgba(212, 19, 66, 1);
+    box-shadow: 0px 0px 88px -14px rgba(212, 19, 66, 1);
+    background-color: color-get('btn-bg-alternative');
+    color: color-get('accent-primary');
+  }
+  &__button--secondary:hover p {
+    transition: transform 1s linear;
+    display: flex;
   }
 
   &__btn {
     display: flex;
     justify-content: center;
+  }
+  &__easter {
+    display: none;
+    left: 50%;
+    top: 50%;
+    font-weight: 100;
   }
 }
 
@@ -102,7 +129,58 @@
   height: 382px;
   position: absolute;
   top: 131px;
-  z-index: 0;
+  z-index: 3;
   justify-items: center;
   background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 768px) {
+  .table {
+    padding: 50px;
+    &__list {
+      display: grid;
+    }
+    &__box {
+      margin: 20px 0;
+    }
+    &__button {
+      margin: 0;
+      gap: 10px;
+    }
+    &__btn {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      row-gap: 10px;
+      margin-top: 34px;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .table {
+    &__box {
+      width: 220px;
+      padding: 31px;
+      font-size: 14px;
+    }
+    &__hour,
+    &__head,
+    &__place,
+    &__day,
+    &__content,
+    &__contact {
+      font-size: 14px;
+    }
+    &__content {
+      line-height: 23.24px;
+    }
+    &__head {
+      margin-top: 20px;
+    }
+  }
+  .line {
+    max-width: -webkit-fill-available;
+    margin: 30px 0;
+  }
 }
