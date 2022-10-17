@@ -44,6 +44,7 @@
 
   &__item--1 {
     background-color: color-get('first-chld');
+    z-index: 0;
   }
 
   &__item--2 {

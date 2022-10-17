@@ -591,6 +591,7 @@ a {
 }
 .products__item--1 {
   background-color: #FFB8CA;
+  z-index: 0;
 }
 .products__item--2 {
   background-color: #F0D1A5;
