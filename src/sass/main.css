@@ -718,6 +718,10 @@ svg {
     transform: translate(-22%, -109%);
   }
 }
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 @media screen and (min-width: 768px) {
   .products {
     min-width: 768px;
