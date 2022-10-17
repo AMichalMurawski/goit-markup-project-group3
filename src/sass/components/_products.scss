@@ -270,15 +270,15 @@ position: absolute;
     }
 
     &__name--2::before {
-      content: url(../images/products-coffee.png) 337px 335px;
+      content: url(../images/products-coffee-desktop.png);
       position: absolute;
-      transform: translate(-14%, -125%);
+      transform: translate(-23%, -108%);
     }
 
     &__name--3::before {
-      content: url(../images/products-milkshake.png);
+      content: url(../images/products-milkshake-desktop.png);
       position: absolute;
-      transform: translate(-9%, -125%);
+      transform: translate(2%, -108%);
     }
 
     &__name::after {
@@ -289,7 +289,7 @@ position: absolute;
     &__name--3::after {
       content: url(../images/dots.png);
       position: absolute;
-      transform: translate(-415%, 150%);
+      transform: translate(-415%, 145%);
     }
 
     &__description {
