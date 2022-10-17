@@ -8,20 +8,19 @@
     position: relative;
     @include flex-display(column, null, space-between);
     margin: 0 auto;
-    min-width: calc(320px - (100vw - 100%)); //min-width: 320px;
-    max-width: calc(1280px - (100vw - 100%)); //max-width: 1280px;
+    min-width: calc(320px - (100vw - 100%));
+    max-width: calc(1280px - (100vw - 100%));
     padding: 6px 20px 0 20px;
     background-image: url('../images/header_bg-circle.png');
     background-size: 344px, cover;
     background-repeat: no-repeat;
-    background-position: top 10vh right 10vw; //top 83px left 36px;
+    background-position: top 10vh right 10vw;
   }
 
   &__block {
     @include flex-display(row, null, space-between, center);
     margin: 0;
     padding: 0;
-    // border: 1px solid red;
 
     &--bottom-left {
       display: none;
@@ -32,8 +31,7 @@
   }
   &__list {
     display: inline;
-    margin: 0;
-    padding: 0;
+    
   }
   &__link {
     outline: none;
@@ -61,6 +59,7 @@
     fill: color-get('accent-primary');
     background-color: transparent;
     @include transition-add('fill');
+
     &:focus,
     &:hover {
       fill: color-get('shdw-dots');
@@ -81,6 +80,7 @@
     font-family: Titan One;
     @include font-type(400, 26px, 1.14, 0.04em);
     color: color-get('text-alternative');
+
     &--bigger {
       @include font-type(null, 48px, 0.96);
       color: color-get('accent-primary');
@@ -93,14 +93,7 @@
   }
   &__buttons {
     @include flex-display(row, 8px);
-    // margin: 0;
-    // padding: 0;
-    // cursor: pointer;
   }
-  // &__btn {
-  //   outline: none;
-  //   text-decoration: none;
-  // }
   &__eatery {
     display: none;
   }
@@ -109,9 +102,9 @@
       position: absolute;
       width: 171px;
       height: 410px;
-      right: 35vw; //left: 117px;
+      right: 35vw;
       bottom: 0;
-      // border: 1px solid blue;
+      
       img {
         position: absolute;
         bottom: 0;
@@ -127,6 +120,7 @@
 }
 
 // media background image
+
 @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .header {
     background-image: url('../images/header_bg-circle@2x.png');
@@ -148,7 +142,6 @@
       padding-bottom: 0;
       background-size: 322px, cover;
       background-position: top 5vh right 35vw;
-      //background-position: top 31px left 307px;
     }
 
     &__block {
@@ -180,9 +173,7 @@
     }
     &__eatery {
       @include flex-display(column, 14px);
-      margin: 0;
       margin-top: 14px;
-      padding: 0;
       text-align: right;
 
       &-item {
@@ -202,8 +193,6 @@
 
       &-number {
         position: relative;
-        margin: 0;
-        padding: 0;
         font-family: Titan One;
         @include font-type(400, 28px, 1.14, 0.04em);
         color: color-get('accent-primary');
@@ -220,14 +209,12 @@
     &__block {
       &--bottom-left {
         @include flex-display(row);
-        // border: 1px solid teal;
       }
     }
     &__article {
       @include flex-display(column, 7px, flex-start);
       margin-top: 20px;
       margin-bottom: 34px;
-      // border: 1px solid teal;
     }
     &__post {
       max-width: 114px;
@@ -237,6 +224,17 @@
 
       @include font-type(400, 8px, 1.5, null);
       color: color-get('text-alternative');
+      &--secondary {
+        display: none;
+      }
+      &:hover .header__post--main,
+      &:focus .header__post--main {
+        display: none;
+      }
+      &:hover .header__post--secondary,
+      &:focus .header__post--secondary {
+        display: flex;
+      }
     }
     &__arrow {
       display: flex;
@@ -276,9 +274,6 @@
       &--main {
         width: 143px;
         height: 336px;
-        right: 35vw;
-        //left: 378px;
-        //background-size: contain;
       }
       &--girl {
         position: relative;
@@ -287,7 +282,7 @@
         display: flex;
         margin-left: 30px;
         overflow: hidden;
-        // border: 1px solid teal;
+        
         &:hover {
           .header__slider--overlay {
             display: block;
@@ -400,7 +395,7 @@
     }
     &__post {
       max-width: 200px;
-      height: auto; //78px;
+      height: auto;
       @include font-type(400, 14px, 1.4, null);
     }
     &__arrow {
@@ -421,7 +416,9 @@
       &--main {
         width: 236px;
         height: 557px;
-        left: 580px;
+        img {
+          right: 0;
+        }
       }
       &--girl {
         width: 293px;
