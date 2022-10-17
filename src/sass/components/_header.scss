@@ -1,14 +1,15 @@
 @use '../utils/forward' as *;
 
 .header {
+  width: calc(100vw - (100vw - 100%));
   background-color: color-get('bg-alternative');
 
   &__container {
     position: relative;
     @include flex-display(column, null, space-between);
     margin: 0 auto;
-    min-width: 320px;
-    max-width: 1280px;
+    min-width: calc(320px - (100vw - 100%)); //min-width: 320px;
+    max-width: calc(1280px - (100vw - 100%)); //max-width: 1280px;
     padding: 6px 20px 0 20px;
     background-image: url('../images/header_bg-circle.png');
     background-size: 344px, cover;
