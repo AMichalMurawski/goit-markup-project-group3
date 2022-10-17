@@ -237,6 +237,17 @@
 
       @include font-type(400, 8px, 1.5, null);
       color: color-get('text-alternative');
+      &--secondary {
+        display: none;
+      }
+      &:hover .header__post--main,
+      &:focus .header__post--main {
+        display: none;
+      }
+      &:hover .header__post--secondary,
+      &:focus .header__post--secondary {
+        display: flex;
+      }
     }
     &__arrow {
       display: flex;
