@@ -660,16 +660,21 @@ svg {
   line-height: 21px;
   letter-spacing: 0.04em;
 }
-.products__arrow {
+.products__button {
   display: flex;
   padding: 5px;
-  width: 18px;
-  height: 18px;
+  width: 40px;
+  height: 40px;
   outline: none;
   cursor: pointer;
   border: none;
   border-radius: 50%;
   background-color: #FFFFFF;
+  transform: translate(330%, -170%);
+}
+.products__icon-arrow {
+  width: 8px;
+  height: 8px;
 }
 .products__icons {
   width: 24px;
@@ -679,14 +684,6 @@ svg {
 }
 .products__icons:focus, .products__icons:hover {
   fill: #C7133E;
-}
-.products:focus, .products:hover {
-  background-color: #D41443;
-}
-.products__icon-arrow {
-  fill: #FFFFFF;
-  width: 40px;
-  height: 40px;
 }
 
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {

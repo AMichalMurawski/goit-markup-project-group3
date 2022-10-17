@@ -109,19 +109,25 @@
   }
 
 
-  &__arrow {
-    display: flex;
-    padding: 5px;
-    width: 18px;
-    height: 18px;
-    outline: none;
-    cursor: pointer;
-    border: none;
-    border-radius: 50%;
-    background-color: color-get('text-alternative');
-  }
+   &__button {
+      display: flex;
+      padding: 5px;
+      width: 40px;
+      height: 40px;
+      outline: none;
+      cursor: pointer;
+      border: none;
+      border-radius: 50%;
+      background-color: color-get('text-alternative');
+     transform: translate(330%, -170%);
+    }
 
-  &__icons {
+    &__icon-arrow {
+      width: 8px;
+      height: 8px;
+    }
+  
+    &__icons {
     width: 24px;
     height: 24px;
     fill: color-get('accent-primary');
@@ -131,17 +137,6 @@
       fill: color-get('shdw-dots');
     }
   }
-    &:focus,
-  &:hover {
-    background-color: color-get('accent-primary');
-  }
-
-    &__icon-arrow {
-      fill: color-get('text-alternative');
-      width: 40px;
-    height: 40px;
-    }
-  
 }
 
 
