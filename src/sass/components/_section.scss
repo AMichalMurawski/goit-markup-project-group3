@@ -7,7 +7,7 @@
   &__container {
     padding-inline: 20px;
     min-width: calc(320px - (100vw - 100%));
-    max-width: 1280px;
+    max-width: calc(1280px - (100vw - 100%));
     width: 100%;
     margin: 0 auto;
   }
