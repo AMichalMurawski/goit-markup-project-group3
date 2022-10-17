@@ -243,8 +243,8 @@
       // border: 1px solid teal;
     }
     &__post {
-      width: 114px;
-      height: 48px;
+      max-width: 114px;
+      height: auto;
       margin: 0;
       padding: 0;
 
@@ -424,8 +424,8 @@
     &__easter {
       bottom: 40px;
       left: 130px;
-      @include font-type(400, 10px, 1.4, null);
-      color: get('text-alternative');
+      font-size: 10px;
+      
     }
     &__slider {
       &--main {
