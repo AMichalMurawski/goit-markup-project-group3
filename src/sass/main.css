@@ -1,3 +1,4 @@
+
 body {
   font-family: "DM Sans", sans-serif;
   font-weight: 400;
@@ -747,6 +748,41 @@ svg {
   font-size: 14px;
   line-height: 21px;
   letter-spacing: 0.04em;
+}
+
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .products__name--1::before {
+    content: url(../images/products-icecream@2x.png) 249px 252px;
+    position: absolute;
+    transform: translate(-28%, -106%);
+  }
+  .products__name--2::before {
+    content: url(../images/products-coffee@2x.png) 249px 252px;
+    position: absolute;
+    transform: translate(-28%, -107%);
+  }
+  .products__name--3::before {
+    content: url(../images/products-milkshake@2x.png) 249px 252px;
+    position: absolute;
+    transform: translate(-22%, -109%);
+  }
+}
+@media (min-device-pixel-ratio: 3), (-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi), (min-resolution: 3dppx) {
+  .products__name--1::before {
+    content: url(../images/products-icecream@3x.png) 249px 252px;
+    position: absolute;
+    transform: translate(-28%, -107%);
+  }
+  .products__name--2::before {
+    content: url(../images/products-coffee@3x.png) 249px 252px;
+    position: absolute;
+    transform: translate(-28%, -107%);
+  }
+  .products__name--3::before {
+    content: url(../images/products-milkshake@3x.png) 249px 252px;
+    position: absolute;
+    transform: translate(-22%, -109%);
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -2281,3 +2317,4 @@ svg {
 .modal .modal-visable {
   display: block;
 }/*# sourceMappingURL=main.css.map */
+

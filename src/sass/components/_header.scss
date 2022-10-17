@@ -172,7 +172,7 @@
       }
     }
     &__eatery {
-      @include flex-display(column, 14px)
+      @include flex-display(column, 14px);
       margin-top: 14px;
       text-align: right;
 

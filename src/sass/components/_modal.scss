@@ -25,16 +25,12 @@
     transform: translate(-50%, -50%);
     min-width: 320px;
     max-width: 480px;
-    width: 100%;
+    // width: 500px;
     max-height: max-content;
     height: max-content;
-    background-color: color-get('bg-mobile');
+    background-color: color-get('bg-alternative');
 
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: space-between;
-    // align-items: center;
-    @include flex-display(column, null, center, center);
+    @include flex-display(column, 20px, center, center);
 
     z-index: 999;
     @media (min-width: 481px) {
@@ -52,19 +48,15 @@
     display: block;
     text-transform: uppercase;
     font-family: 'Titan One';
-    color: color-get('text-alternative');
+    color: color-get('text-secondary');
     &--accent {
-      color: color-get('accent-secondary');
+      color: color-get('accent-primary');
       font-size: 30px;
       letter-spacing: 6px;
       margin-top: 10px;
     }
   }
   &__option {
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: center;
-    // align-items: stretch;
     @include flex-display(column, null, center, stretch);
 
     column-gap: 20px;
@@ -83,10 +75,6 @@
     padding: 20px;
   }
   &__button-list {
-    // display: flex;
-    // flex-wrap: wrap;
-    // gap: 5px;
-    // justify-content: center;
     @include flex-display(wrap, 5px, center, null);
 
     // flex-direction: row;
@@ -105,7 +93,7 @@
     border-radius: 24px;
     min-width: 200px;
     max-width: 200px;
-    height: 200px;
+    height: 160px;
 
     &:hover,
     &:focus {
@@ -119,7 +107,7 @@
   &__text {
     font-family: 'DM Sans';
     font-weight: 700px;
-    font-size: 15px;
+    font-size: 20px;
     line-height: 1.28;
     // @include font-type(700px, 15px, 1.28, null);
 
