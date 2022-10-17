@@ -1,8 +1,12 @@
 @use '../utils/forward' as *;
 .footer {
+  width: calc(100vw - (100vw - 100%));
   background-color: color-get('bg-secondary');
   &__container {
     padding: 0 20px;
+    min-width: calc(320px - (100vw - 100%));
+    max-width: calc(1280px - (100vw - 100%));
+    margin: 0 auto;
   }
   &__svg-link {
     width: 34px;
