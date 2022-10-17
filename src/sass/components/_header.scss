@@ -408,8 +408,8 @@
       gap: 20px;
     }
     &__post {
-      width: 200px;
-      height: 78px;
+      max-width: 200px;
+      height: auto; //78px;
       @include font-type(400, 14px, 1.4, null);
     }
     &__arrow {
