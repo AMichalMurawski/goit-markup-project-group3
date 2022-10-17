@@ -12,3 +12,7 @@
     refs.modal.classList.toggle('is-hidden');
   }
 })();
+
+
+// Coded by Łukasik Grzegorz
+// https://github.com/lukasikgrzegorz

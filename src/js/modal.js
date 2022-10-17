@@ -1,26 +1,10 @@
-//modal podstawowy
-// (() => {
-//   const refs = {
-//     openModalBtn: document.querySelector('[data-modal-open-1]'),
-//     closeModalBtn: document.querySelector('[data-modal-close-1]'),
-//     modal: document.querySelector('[data-modal-1]'),
-//   };
-
-//   refs.openModalBtn.addEventListener('click', toggleModal);
-//   refs.closeModalBtn.addEventListener('click', toggleModal);
-
-//   function toggleModal() {
-//     refs.modal.classList.toggle('is-hidden');
-//   }
-// })();
-
-
-//modal od Grzegorza
 (() => {
   const modals = [
   { openModalBtn: document.querySelector('[data-modal-open-1]'),
     closeModalBtn: document.querySelector('[data-modal-close-1]'),
-    modal: document.querySelector('[data-modal-1]')
+    modal: document.querySelector('[data-modal-1]'),
+    openModalBtnMenu: document.querySelector('[data-modal-open-3]'),
+    
   },
   { openModalBtn: document.querySelector('[data-modal-open-2]'),
     closeModalBtn: document.querySelector('[data-modal-close-2]'),
@@ -30,7 +14,8 @@
   modals[0].openModalBtn.addEventListener('click', ()=>modals[0].modal.classList.toggle('is-hidden') );
   modals[0].closeModalBtn.addEventListener('click', ()=>modals[0].modal.classList.toggle('is-hidden'));
   modals[1].openModalBtn.addEventListener('click', ()=>modals[1].modal.classList.toggle('is-hidden') );
-  modals[1].closeModalBtn.addEventListener('click', ()=>modals[1].modal.classList.toggle('is-hidden'));
+  modals[1].closeModalBtn.addEventListener('click', () => modals[1].modal.classList.toggle('is-hidden'));
+  modals[0].openModalBtnMenu.addEventListener('click', ()=>modals[0].modal.classList.toggle('is-hidden') );
    
   //For second div with google maps
   localDivs = [
@@ -52,3 +37,7 @@
   });
   
 })();
+
+
+// Coded by Łukasik Grzegorz
+// https://github.com/lukasikgrzegorz

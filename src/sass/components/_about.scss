@@ -19,7 +19,11 @@
     background-position: bottom;
     background-repeat: no-repeat;
     width: 100%;
-    height: 100%;
+    height: 100vh;
+
+    &--desktop {
+      display: none;
+    }
   }
 
   &__title {
@@ -44,6 +48,40 @@
   &__main {
     position: relative;
     @include flex-display(column, null, null, center);
+  }
+
+  &__bio-eco {
+    position: relative;
+
+    & > img {
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  &__made-by {
+    position: absolute;
+    @include font-type(null, 8px);
+    color: black;
+    bottom: 40%;
+    right: 30%;
+    z-index: 0;
+
+    .about__bio-eco:hover & {
+      animation: madeBySlide 1s linear forwards;
+    }
+  }
+}
+
+@keyframes madeBySlide {
+  0% {
+    transform: rotate(60deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+    bottom: 10%;
+    right: 5%;
   }
 }
 
@@ -70,17 +108,17 @@
 @include media-mapp('phone', 'tablet') {
   .about {
     &__label {
-      @include font-fulltype(null, 18px, null, null, 480px, 768px, 26px);
+      @include font-type(null, 26px);
     }
 
     &__header {
-      @include font-fulltype(null, 34px, null, null, 480px, 768px, 48px);
+      @include font-type(null, 48px);
     }
   }
 
   .description {
     &__info {
-      @include font-fulltype(null, 12px, null, null, 480px, 768px, 14px);
+      @include font-type(null, 12px);
     }
   }
 }
@@ -100,11 +138,11 @@
     }
 
     &__label {
-      @include font-fulltype(null, 26px, null, null, 768px, 1200px, 30px);
+      @include font-type(null, 30px);
     }
 
     &__header {
-      @include font-fulltype(null, 48px, null, null, 768px, 1200px, 58px);
+      @include font-type(null, 58px);
     }
 
     &__main {
@@ -116,6 +154,10 @@
       @include flex-basis(2, 20px);
     }
 
+    &__made-by {
+      @include font-type(null, 10px);
+    }
+
     &__description {
       @include flex-basis(2, 20px);
     }
@@ -125,7 +167,7 @@
     padding: 50px 0 0;
 
     &__info {
-      @include font-fulltype(null, 14px, null, null, 768px, 1200px, 16px);
+      @include font-type(null, 14px);
     }
 
     &__btn {
@@ -141,7 +183,7 @@
       padding-bottom: 0;
     }
 
-    &__background-image {
+    &__background-image--desktop {
       display: block;
       bottom: -65px;
     }
@@ -165,6 +207,10 @@
 
     &__bio-eco {
       max-width: 516px;
+    }
+
+    &__made-by {
+      @include font-type(null, 12px);
     }
 
     &__description {

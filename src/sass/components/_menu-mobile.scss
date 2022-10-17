@@ -9,7 +9,7 @@
     height: 100%; 
     background-color: color-get("bg-mobile"); 
     padding: 60px 0px 0px 0px; 
-    box-shadow: drop-shadow(-8px 0px 20px rgba(0, 0, 0, 0.25)); 
+    box-shadow: -8px 0px 20px rgba(0, 0, 0, 0.25);
     transition: transform 400ms ease-out;
     transform: translateX(100%);
 } 
