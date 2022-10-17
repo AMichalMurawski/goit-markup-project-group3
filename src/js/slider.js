@@ -65,3 +65,6 @@
      //--------------------
 
 })();
+
+// Coded by Łukasik Grzegorz
+// https://github.com/lukasikgrzegorz
