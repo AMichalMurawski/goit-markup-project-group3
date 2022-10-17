@@ -659,8 +659,8 @@ a {
   border: none;
   border-radius: 50%;
   background-color: #FFFFFF;
-  top: 85%;
-  left: 44%;
+  top: 83%;
+  left: 42%;
 }
 .products__button:focus, .products__button:hover {
   background-color: #D41443;
