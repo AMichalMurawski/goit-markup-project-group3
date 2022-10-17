@@ -59,6 +59,7 @@
     width: 24px;
     height: 24px;
     fill: color-get('accent-primary');
+    background-color: transparent;
     @include transition-add('fill');
     &:focus,
     &:hover {
@@ -92,14 +93,14 @@
   }
   &__buttons {
     @include flex-display(row, 8px);
-    margin: 0;
-    padding: 0;
-    cursor: pointer;
+    // margin: 0;
+    // padding: 0;
+    // cursor: pointer;
   }
-  &__btn {
-    outline: none;
-    text-decoration: none;
-  }
+  // &__btn {
+  //   outline: none;
+  //   text-decoration: none;
+  // }
   &__eatery {
     display: none;
   }
@@ -139,7 +140,7 @@
 
 // media tablet
 
-@include media-mapp('tablet') {
+@media screen and (min-width: 768px) {
   .header {
     &__container {
       @include mix-container(34px);
@@ -165,7 +166,6 @@
       display: flex;
       width: 160px;
       padding-right: 24px;
-      
     }
     &__title {
       margin-top: 15px;
@@ -253,11 +253,14 @@
       &:hover {
         background-color: color-get('accent-primary');
         .header__icon-arrow {
+          stroke: none;
+          background-color: transparent;
           fill: color-get('text-alternative');
         }
       }
     }
     &__icon-arrow {
+      fill: color-get('accent-primary');
       width: 8px;
       height: 8px;
     }
@@ -413,7 +416,6 @@
       bottom: 40px;
       left: 130px;
       font-size: 10px;
-      
     }
     &__slider {
       &--main {
