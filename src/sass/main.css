@@ -783,12 +783,12 @@ a {
     padding-top: 161px;
   }
   .products__name--1::before {
-    content: url(../images/products-icecream.png);
+    content: url(../images/products-icecream-desktop.png);
     position: absolute;
-    transform: translate(-15%, -125%);
+    transform: translate(-23%, -108%);
   }
   .products__name--2::before {
-    content: url(../images/products-coffee.png);
+    content: url(../images/products-coffee.png) 337px 335px;
     position: absolute;
     transform: translate(-14%, -125%);
   }
