@@ -688,7 +688,7 @@ svg {
   .products__name--1::before {
     content: url(../images/products-icecream@2x.png) 249px 252px;
     position: absolute;
-    transform: translate(-28%, -107%);
+    transform: translate(-28%, -106%);
   }
   .products__name--2::before {
     content: url(../images/products-coffee@2x.png) 249px 252px;
