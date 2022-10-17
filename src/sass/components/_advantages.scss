@@ -170,6 +170,62 @@
 .mansory__title {
   display: none;
 }
+.mansory__animation {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 5px;
+}
+.mansory__who {
+  position: relative;
+  float: left;
+  font-size: 9px;
+  font-family: 'DM Sans';
+  background-color: #fff5f6;
+  color: #fff5f6;
+}
+
+.mansory__who:hover > span {
+  position: absolute;
+  background-color: #fff5f6;
+  color: black;
+  top: 0;
+  right: 0;
+  height: 100%;
+  background-color: #fff5f6;
+  animation: mansoryWho 15s linear;
+  cursor: pointer;
+
+  animation: mansoryColor 15s linear;
+}
+.mansory__hearts {
+  width: 15px;
+  height: 15px;
+}
+
+@keyframes mansoryWho {
+  0% {
+    width: 100%;
+  }
+  50% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes mansoryColor {
+  0% {
+    color: black;
+  }
+  50% {
+    color: black;
+  }
+  100% {
+    color: black;
+  }
+}
+
 .mansory__thumb {
   width: 100%;
 }
