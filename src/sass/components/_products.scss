@@ -121,7 +121,8 @@ position: absolute;
     border: none;
     border-radius: 50%;
     background-color: color-get('text-alternative');
-    transform: translate(330%, -170%);
+    top: 85%;
+    left: 44%;
     &:focus,
     &:hover {
       background-color: color-get('accent-primary');
@@ -212,6 +213,10 @@ position: absolute;
     &__item {
       @include flex-basis(3, 20px);
     }
+
+    &__lorem {
+      display: none;
+    }
   }
 }
 
@@ -225,6 +230,21 @@ position: absolute;
       margin: 0 auto;
       padding: 127px 112px 119px;
     }
+
+&__label {
+    font-weight: 400px;
+    font-size: 30px;
+    line-height: 34px;
+  letter-spacing: 4%;
+  }
+
+     &__headline {
+    font-weight: 400;
+    font-size: 58px;
+    line-height: 66px;
+    letter-spacing: 6%;
+    
+  }
 
     &__list {
       margin-top: 259px;
@@ -279,6 +299,10 @@ position: absolute;
       font-size: 16px;
       line-height: 28px;
       letter-spacing: 0.04em;
+    }
+
+    &__lorem {
+      display: none;
     }
   }
 }
