@@ -31,19 +31,19 @@
         </nav>
         <div class="header__block--top-right">
           <button
-            class="header__mobile"
+            class="header__mobile btn"
             aria-expanded="false"
             aria-controls="mobile-menu"
-            js-open-menu
+            data-modal-open-1
           >
             <svg class="header__icons">
-              <use xlink:href="./images/icons2.svg#burger" width="24" height="24"></use>
+              <use xlink:href="./images/icons-header.svg#burger" width="24" height="24"></use>
             </svg>
           </button>
-          <button class="header__buy" type="button">
+          <button class="header__buy btn btn__primary" type="button">
             Buy now
             <svg class="header__icons">
-              <use xlink:href="./images/icons2.svg#buy" width="24" height="24"></use>
+              <use xlink:href="./images/icons-header.svg#buy" width="24" height="24"></use>
             </svg>
           </button>
         </div>
@@ -92,21 +92,26 @@
             />
           </div>
           <article class="header__article">
-            <p class="header__post">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore et
-            </p>
-
+            <div class="header__post">
+              <p class="header__post--secondary">
+                We use only natural ingredients. Pure milk from real cows. No digital. No virtual. No artificial. No
+                shit!
+              </p>
+              <p class="header__post--main">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et
+              </p>
+            </div>
             <button class="header__arrow" type="button">
-              <svg class="header__icons header__icon-arrow">
-                <use xlink:href="./images/icons2.svg#arrow" width="8px" height="8px"></use>
+              <svg class="header__icon-arrow">
+                <use xlink:href="./images/icons-header.svg#arrow" width="8px" height="8px"></use>
               </svg>
             </button>
           </article>
         </div>
         <div class="header__slider--girl">
-          <div class="header__easter">
-            <p>This header<br />has been made<br />by<br />Rafał G. "Hunter"</p>
+          <div class="header__post header__easter">
+            <p>Header<br />made by<br />Rafał G. "Hunter"</p>
           </div>
           <img
             class="header__slider--overlay"
