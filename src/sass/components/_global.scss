@@ -1,5 +1,9 @@
 @use '../utils/forward' as *;
 
+* {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'DM Sans', sans-serif;
   @include font-type(400, 14px, 1.3, 0.04em);
