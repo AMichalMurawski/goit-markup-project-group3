@@ -1,0 +1,76 @@
+@use '../utils/forward' as *;
+
+.memory {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 5vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10vh;
+  visibility: hidden;
+  opacity: 0;
+  @include transition-add('visibility' 'opacity');
+
+  &__show {
+    visibility: visible;
+    opacity: 1;
+    & ~ * {
+      filter: grayscale(1) blur(2px);
+    }
+  }
+
+  &__ribbon {
+    position: absolute;
+    top: 1vmax;
+    left: 1vmax;
+    width: 3vmax;
+  }
+
+  &__robbie-coltrane {
+    position: absolute;
+    top: center;
+    left: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10vh;
+    width: 90vw;
+    height: 90vh;
+  }
+
+  &__quote {
+    color: black;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.5;
+    letter-spacing: 0.06em;
+    text-shadow: 2px 2px 4px white;
+  }
+
+  &__robbie-coltrane > img {
+    max-height: 80vh;
+    max-width: 90vw;
+    width: auto;
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .memory__quote {
+    font-size: calc(14px + 8 * ((100vw - 480px) / 720));
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .memory__quote {
+    font-size: 22px;
+  }
+}
