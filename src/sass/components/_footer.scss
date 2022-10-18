@@ -1,4 +1,5 @@
 @use '../utils/forward' as *;
+
 .footer {
   width: calc(100vw - (100vw - 100%));
   background-color: color-get('bg-secondary');
