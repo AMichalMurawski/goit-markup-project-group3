@@ -1,6 +1,7 @@
 @use '../utils/forward' as *;
 
 .products {
+  
   &__container {
     padding-top: 121px;
     padding-bottom: 98px;
@@ -113,7 +114,8 @@
   &__button {
     display: flex;
     margin: 0;
-position: absolute;
+    color: color-get('accent-primary');
+    position: absolute;
     padding: 5px;
     width: 40px;
     height: 40px;
@@ -127,19 +129,17 @@ position: absolute;
     &:focus,
     &:hover {
       background-color: color-get('accent-primary');
+      color: color-get('text-alternative');
     }
   }
 
   &__icon {
     padding: 7px;
-    width: 40x;
+    width: 40px;
     height: 40px;
-    fill: color-get('accent-primary');
+    fill: currentColor;
+    stroke: none;
     @include transition-add('fill');
-    &:focus,
-    &:hover {
-      fill: color-get('text-alternative');
-    }
   }
 }
 
@@ -232,20 +232,19 @@ position: absolute;
       padding: 127px 112px 119px;
     }
 
-&__label {
-    font-weight: 400px;
-    font-size: 30px;
-    line-height: 34px;
-  letter-spacing: 4%;
-  }
+    &__label {
+      font-weight: 400px;
+      font-size: 30px;
+      line-height: 34px;
+      letter-spacing: 4%;
+    }
 
-     &__headline {
-    font-weight: 400;
-    font-size: 58px;
-    line-height: 66px;
-    letter-spacing: 6%;
-    
-  }
+    &__headline {
+      font-weight: 400;
+      font-size: 58px;
+      line-height: 66px;
+      letter-spacing: 6%;
+    }
 
     &__list {
       margin-top: 259px;
@@ -306,4 +305,12 @@ position: absolute;
       display: none;
     }
   }
+}
+
+
+.made-by{
+  font-size: 28px;
+  line-height: 1.5;
+  background-color: rgba(0,0,0,0.1);
+
 }
