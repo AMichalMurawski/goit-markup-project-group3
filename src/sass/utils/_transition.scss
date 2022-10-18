@@ -16,7 +16,6 @@
 //       @include addTransition('color' 'fill');
 //     }
 
-
 @import './error';
 
 $transitionProperty: 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -31,6 +30,7 @@ $transition: (
   'opacity': opacity $transitionProperty,
   'visibility': visibility $transitionProperty,
   'flex-basis': visibility $transitionProperty,
+  'filter': visibility $transitionProperty,
 );
 
 $transitionCheck: (
@@ -43,6 +43,7 @@ $transitionCheck: (
   'opacity',
   'visibility',
   'flex-basis',
+  'filter'
 );
 
 @function getOneTransition($var) {

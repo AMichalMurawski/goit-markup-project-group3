@@ -138,6 +138,94 @@ a {
     border-radius: 20px;
   }
 }
+.memory {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 5vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10vh;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: visibility 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: visibility 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.memory__show {
+  visibility: visible;
+  opacity: 1;
+}
+.memory__show ~ * {
+  -webkit-filter: grayscale(1) blur(2px);
+          filter: grayscale(1) blur(2px);
+}
+.memory__ribbon {
+  position: absolute;
+  top: 1vmax;
+  left: 1vmax;
+  width: 3vmax;
+}
+.memory__robbie-coltrane {
+  position: absolute;
+  top: center;
+  left: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10vh;
+  width: 90vw;
+  height: 90vh;
+}
+.memory__quote {
+  color: black;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: 0.06em;
+  text-shadow: 2px 2px 4px white;
+}
+.memory__robbie-coltrane > img {
+  max-height: 80vh;
+  max-width: 90vw;
+  width: auto;
+  height: auto;
+}
+
+@media screen and (min-width: 480px) {
+  .memory__quote {
+    font-size: calc(14px + 8 * (100vw - 480px) / 720);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .memory__quote {
+    font-size: 22px;
+  }
+}
 .header {
   width: calc(100vw - (100vw - 100%));
   background-color: #FFB8CA;
