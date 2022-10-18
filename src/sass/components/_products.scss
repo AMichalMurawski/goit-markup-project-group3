@@ -37,12 +37,14 @@
 
   &__item {
     margin: 0 auto;
+    position: relative;
     border-radius: 24px;
     @include flex-basis(1, 130px);
   }
 
   &__item--1 {
     background-color: color-get('first-chld');
+    z-index: 0;
   }
 
   &__item--2 {
@@ -110,6 +112,8 @@
 
   &__button {
     display: flex;
+    margin: 0;
+position: absolute;
     padding: 5px;
     width: 40px;
     height: 40px;
@@ -118,15 +122,18 @@
     border: none;
     border-radius: 50%;
     background-color: color-get('text-alternative');
-    transform: translate(330%, -170%);
+    top: 83%;
+    left: 42%;
     &:focus,
     &:hover {
       background-color: color-get('accent-primary');
     }
   }
 
-  &__icons {
+  &__icon {
     padding: 7px;
+    width: 40x;
+    height: 40px;
     fill: color-get('accent-primary');
     @include transition-add('fill');
     &:focus,
@@ -207,6 +214,10 @@
     &__item {
       @include flex-basis(3, 20px);
     }
+
+    &__lorem {
+      display: none;
+    }
   }
 }
 
@@ -220,6 +231,21 @@
       margin: 0 auto;
       padding: 127px 112px 119px;
     }
+
+&__label {
+    font-weight: 400px;
+    font-size: 30px;
+    line-height: 34px;
+  letter-spacing: 4%;
+  }
+
+     &__headline {
+    font-weight: 400;
+    font-size: 58px;
+    line-height: 66px;
+    letter-spacing: 6%;
+    
+  }
 
     &__list {
       margin-top: 259px;
@@ -239,21 +265,21 @@
     }
 
     &__name--1::before {
-      content: url(../images/products-icecream.png);
+      content: url(../images/products-icecream-desktop.png);
       position: absolute;
-      transform: translate(-15%, -125%);
+      transform: translate(-22%, -108%);
     }
 
     &__name--2::before {
-      content: url(../images/products-coffee.png);
+      content: url(../images/products-coffee-desktop.png);
       position: absolute;
-      transform: translate(-14%, -125%);
+      transform: translate(-22%, -108%);
     }
 
     &__name--3::before {
-      content: url(../images/products-milkshake.png);
+      content: url(../images/products-milkshake-desktop.png);
       position: absolute;
-      transform: translate(-9%, -125%);
+      transform: translate(-18%, -105%);
     }
 
     &__name::after {
@@ -264,7 +290,7 @@
     &__name--3::after {
       content: url(../images/dots.png);
       position: absolute;
-      transform: translate(-415%, 150%);
+      transform: translate(-415%, 145%);
     }
 
     &__description {
@@ -274,6 +300,10 @@
       font-size: 16px;
       line-height: 28px;
       letter-spacing: 0.04em;
+    }
+
+    &__lorem {
+      display: none;
     }
   }
 }
