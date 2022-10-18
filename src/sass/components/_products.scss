@@ -113,6 +113,7 @@
   &__button {
     display: flex;
     margin: 0;
+    color: color-get('accent-primary');
 position: absolute;
     padding: 5px;
     width: 40px;
@@ -127,19 +128,19 @@ position: absolute;
     &:focus,
     &:hover {
       background-color: color-get('accent-primary');
+      color:color-get('text-alternative');
     }
   }
 
+
+
   &__icon {
     padding: 7px;
-    width: 40x;
+    width: 40px;
     height: 40px;
-    fill: color-get('accent-primary');
+    fill: currentColor;
+    stroke: none;
     @include transition-add('fill');
-    &:focus,
-    &:hover {
-      fill: color-get('text-alternative');
-    }
   }
 }
 
