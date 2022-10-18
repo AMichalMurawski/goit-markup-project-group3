@@ -56,6 +56,7 @@
     width: 24px;
     height: 24px;
     fill: color-get('accent-primary');
+    stroke: none;
     background-color: transparent;
     @include transition-add('fill');
 
@@ -217,7 +218,7 @@
     }
     &__post {
       max-width: 114px;
-      height: auto;
+      height: 48px;
       margin: 0;
       padding: 0;
 
@@ -395,7 +396,7 @@
     }
     &__post {
       max-width: 200px;
-      height: auto;
+      height: 78px;
       @include font-type(400, 14px, 1.4, null);
     }
     &__arrow {
