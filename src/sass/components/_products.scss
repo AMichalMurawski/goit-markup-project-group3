@@ -1,6 +1,7 @@
 @use '../utils/forward' as *;
 
 .products {
+  
   &__container {
     padding-top: 121px;
     padding-bottom: 98px;
@@ -304,4 +305,12 @@
       display: none;
     }
   }
+}
+
+
+.made-by{
+  font-size: 28px;
+  line-height: 1.5;
+  background-color: rgba(0,0,0,0.1);
+
 }
