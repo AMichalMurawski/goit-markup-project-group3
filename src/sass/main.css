@@ -220,6 +220,7 @@ a {
   width: 24px;
   height: 24px;
   fill: #D41443;
+  stroke: none;
   background-color: transparent;
   -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -424,7 +425,7 @@ a {
   }
   .header__post {
     max-width: 114px;
-    height: auto;
+    height: 48px;
     margin: 0;
     padding: 0;
     font-weight: 400;
@@ -609,7 +610,7 @@ a {
   }
   .header__post {
     max-width: 200px;
-    height: auto;
+    height: 78px;
     font-weight: 400;
     font-size: 14px;
     line-height: 1.4;
