@@ -6,7 +6,8 @@
   background: rgb(255, 255, 255);
   background: linear-gradient(180deg, rgba(255, 255, 255, 1) 11%, rgba(255, 245, 246, 1) 12%);
   justify-items: center;
-  z-index: -2;
+  z-index: 1;
+  position: relative;
 
   &__header {
     display: none;
@@ -74,8 +75,7 @@
     line-height: 29.76px;
   }
   &__button {
-    margin: 86px 7.5px 186px 7.5px;
-    // background-color: white;
+    margin: 86px 7.5px 165px 7.5px;
 
     &--primary {
       background-color: color-get('btn-bg');
@@ -84,23 +84,15 @@
     &--secondary {
       background-color: white;
       color: color-get('btn-bg');
+      margin: 86px 7.5px 165px 7.5px;
     }
-  }
-  &__button--primary:hover,
-  &__button-primary:active {
-    -webkit-box-shadow: 0px 0px 88px -14px rgba(212, 19, 66, 1);
-    -moz-box-shadow: 0px 0px 88px -14px rgba(212, 19, 66, 1);
-    box-shadow: 0px 0px 88px -14px rgba(212, 19, 66, 1);
   }
   &__button--secondary:hover,
   &__button--secondary:active {
-    -webkit-box-shadow: 0px 0px 88px -14px rgba(212, 19, 66, 1);
-    -moz-box-shadow: 0px 0px 88px -14px rgba(212, 19, 66, 1);
-    box-shadow: 0px 0px 88px -14px rgba(212, 19, 66, 1);
     background-color: color-get('btn-bg-alternative');
     color: color-get('accent-primary');
   }
-  &__button--secondary:hover p {
+  &__button--secondary:hover span {
     transition: transform 1s linear;
     display: flex;
   }
@@ -129,8 +121,9 @@
   height: 382px;
   position: absolute;
   top: 131px;
-  z-index: 3;
+  z-index: 2;
   justify-items: center;
+  left: 0;
   background-repeat: no-repeat;
 }
 
