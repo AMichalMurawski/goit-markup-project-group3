@@ -1,7 +1,6 @@
 @use '../utils/forward' as *;
 
 .products {
-  
   &__container {
     padding-top: 121px;
     padding-bottom: 98px;
@@ -304,13 +303,50 @@
     &__lorem {
       display: none;
     }
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      &__name--1::before {
+        content: url(../images/products-icecream-desktop@2x.png) 335px 335px;
+        position: absolute;
+        transform: translate(-22%, -108%);
+      }
+
+      &__name--2::before {
+        content: url(../images/products-coffee-desktop@2x.png) 335px 335px;
+        position: absolute;
+        transform: translate(-22%, -108%);
+      }
+
+      &__name--3::before {
+        content: url(../images/products-milkshake-desktop@2x.png) 335px 335px;
+        position: absolute;
+        transform: translate(-18%, -105%);
+      }
+    }
+    @media (min-device-pixel-ratio: 3), (min-resolution: 288dpi), (min-resolution: 3dppx) {
+      &__name--1::before {
+        content: url(../images/products-icecream-desktop@3x.png) 335px 335px;
+        position: absolute;
+        transform: translate(-22%, -108%);
+      }
+
+      &__name--2::before {
+        content: url(../images/products-coffee-desktop@3x.png) 335px 335px;
+        position: absolute;
+        transform: translate(-22%, -108%);
+      }
+
+      &__name--3::before {
+        content: url(../images/products-milkshake-desktop@3x.png) 335px 335px;
+        position: absolute;
+        transform: translate(-18%, -105%);
+      }
+    }
   }
 }
 
-
-.made-by{
+.made-by {
   font-size: 28px;
   line-height: 1.5;
-  background-color: rgba(0,0,0,0.1);
-
+  background-color: rgba(0, 0, 0, 0.1);
 }
