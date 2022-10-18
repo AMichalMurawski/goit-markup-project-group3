@@ -18,7 +18,7 @@
   display: flex;
   &__container {
     margin: 0;
-    padding: 20px 10px;
+    padding: 20px;
     position: relative;
     left: 50%;
     top: 50%;
@@ -70,11 +70,14 @@
   }
   &__location {
     display: none;
-    width: 50vw;
+    width: 100%;
     height: 50vh;
     max-height: 800px;
     min-height: 30px;
-    padding: 0 20px;
+    padding: 0;
+  }
+  &__map {
+    border-radius: 24px;
   }
   &__button-list {
     @include flex-display(wrap, 10px, center, null);
@@ -87,16 +90,14 @@
   &__box {
     background-color: color-get('bg-alternative');
     // @include flex-basis(2, 20px);
-
     @include flex-display(column, null, space-between, null);
-
     padding: 10px;
-    // border: 2px solid color-get('accent-primary');
     border-radius: 24px;
     width: max-content;
     max-width: 200px;
     max-height: 130px;
-    // min-height: 110px;
+    height: 130px;
+    cursor: progress;
     @media (max-height: 480px) {
       & {
         max-height: 110px;
@@ -126,5 +127,18 @@
 
   .modal-visable {
     display: block;
+  }
+}
+//easter egg
+.modal__easter {
+  display: none;
+  &-btn {
+    width: 170px;
+    &:hover .modal__easter {
+      display: flex;
+    }
+    &:hover .modal__easter--disappear {
+      display: none;
+    }
   }
 }
