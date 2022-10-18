@@ -26,6 +26,11 @@ button {
   padding: 0;
 }
 
+button,
+svg {
+  outline: none;
+}
+
 img {
   display: block;
   width: 100%;
@@ -39,6 +44,7 @@ svg {
   fill: currentColor;
   stroke: currentColor;
 }
+
 a {
   text-decoration: none;
 }
