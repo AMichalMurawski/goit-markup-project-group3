@@ -182,7 +182,6 @@
   font-size: 9px;
   font-family: 'DM Sans';
   background-color: #fff5f6;
-  color: #fff5f6;
 }
 
 .mansory__who:hover > span {
@@ -193,11 +192,10 @@
   right: 0;
   height: 100%;
   background-color: #fff5f6;
-  animation: mansoryWho 15s linear;
+  animation: mansoryWho 15s linear ;
   cursor: pointer;
-
-  animation: mansoryColor 15s linear;
 }
+
 .mansory__hearts {
   width: 15px;
   height: 15px;
@@ -212,17 +210,6 @@
   }
   100% {
     width: 100%;
-  }
-}
-@keyframes mansoryColor {
-  0% {
-    color: black;
-  }
-  50% {
-    color: black;
-  }
-  100% {
-    color: black;
   }
 }
 
