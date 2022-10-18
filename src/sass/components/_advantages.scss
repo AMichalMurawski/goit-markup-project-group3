@@ -195,6 +195,8 @@
   height: 15px;
   cursor: pointer;
   z-index: 3;
+  transition-property: animation;
+  transition-delay: 5s;
 }
 .mansory__hide {
   position: absolute;
@@ -205,7 +207,7 @@
   background: #fff5f6;
   z-index: 2;
   .mansory__hearts:hover ~ & {
-    animation: mansoryWho 3s linear;
+    animation: mansoryWho 10s linear;
   }
 }
 
