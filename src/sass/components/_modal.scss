@@ -24,18 +24,16 @@
     top: 50%;
     transform: translate(-50%, -50%);
     min-width: 320px;
-    max-width: 50vw;
+    max-width: 80vw;
     width: max-content;
-    // max-height: max-content;
+    max-height: 90vh;
     height: max-content;
     background-color: color-get('bg-alternative');
 
     @include flex-display(column, 20px, center, center);
 
     z-index: 999;
-    @media (min-width: 481px) {
-      border-radius: 24px;
-    }
+    border-radius: 24px;
   }
   &__title {
     font-weight: 200px;
@@ -54,15 +52,19 @@
       font-size: 30px;
       letter-spacing: 6px;
     }
+    // &:hover {
+    //   display: none;
+    // }
   }
   &__option {
     @include flex-display(column, null, center, stretch);
-
+    // max-height: max-content;
     column-gap: 20px;
     row-gap: 10px;
     @media (min-width: 850px) {
       & {
         flex-direction: row;
+        height: fit-content;
       }
     }
   }
@@ -71,21 +73,21 @@
     width: 50vw;
     height: 50vh;
     max-height: 800px;
-    padding: 20px;
+    min-height: 30px;
+    padding: 0 20px;
   }
   &__button-list {
     @include flex-display(wrap, 10px, center, null);
-
-    // flex-direction: row;
+    @media (max-height: 480px) {
+      & {
+        flex-direction: row;
+      }
+    }
   }
   &__box {
     background-color: color-get('bg-alternative');
     // @include flex-basis(2, 20px);
-    // flex: 1;
 
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: space-between;
     @include flex-display(column, null, space-between, null);
 
     padding: 10px;
@@ -93,7 +95,13 @@
     border-radius: 24px;
     width: max-content;
     max-width: 200px;
-    height: 160px;
+    max-height: 130px;
+    // min-height: 110px;
+    @media (max-height: 480px) {
+      & {
+        max-height: 110px;
+      }
+    }
 
     &:hover,
     &:focus {
@@ -107,13 +115,13 @@
   &__text {
     font-family: 'DM Sans';
     font-weight: 700px;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 1.28;
     // @include font-type(700px, 15px, 1.28, null);
     overflow-wrap: break-word;
     color: color-get('text-alternative');
     text-align: center;
-    margin: 20px 0;
+    margin: 10px 0;
   }
 
   .modal-visable {
