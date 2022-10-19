@@ -256,9 +256,16 @@
           fill: color-get('text-alternative');
         }
       }
+      &:active {
+        background-color: color-get("text-alternative");
+        .header__icon-arrow {
+          fill: color-get("accent-primary");
+        }
+      }
     }
     &__icon-arrow {
       fill: color-get('accent-primary');
+      stroke: none;
       width: 8px;
       height: 8px;
     }
