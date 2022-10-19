@@ -6,6 +6,6 @@
   
   memoryBtn.addEventListener('click', ()=>{
     memoryDiv.classList.add('memory__show');
-    setTimeout(removeClass,5000);
+    setTimeout(removeClass,10000);
   });  
 })();
