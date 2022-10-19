@@ -284,7 +284,8 @@
         margin-left: 30px;
         overflow: hidden;
 
-        &:hover {
+        &:hover,
+        &:focus {
           .header__slider--overlay {
             display: block;
             transform: translateY(100%);
